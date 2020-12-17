@@ -1,0 +1,89 @@
+query GetTickets($queryString: String!, $after: String) {
+    search(first: 50, type: ISSUE, query: $queryString, after: $after) {
+        issueCount
+        pageInfo {
+            hasNextPage
+            endCursor
+        }
+        edges {
+            node {
+                ... on PullRequest {
+                    ...PRDetails
+                }
+                ... on Issue {
+                    ...IssueDetails
+                }
+            }
+        }
+    }
+}
+
+fragment LabelDetails on Label {
+    color
+    name
+}
+
+fragment AssignedDetails on AssignedEvent {
+    actor {
+        login
+    }
+    user {
+        login
+    }
+}
+
+fragment PRDetails on PullRequest {
+    author {
+        login
+    }
+    title
+    updatedAt
+    url
+    timeline(last: 1) {
+        nodes {
+            ... AssignedDetails
+        }
+    }
+    labels(first: 10) {
+        edges {
+            node {
+                ...LabelDetails
+            }
+        }
+    }
+    repository {
+        name
+        url
+        isArchived
+        owner {
+            login
+        }
+    }
+}
+
+
+fragment IssueDetails on Issue {
+    title
+    updatedAt
+    url
+    timeline(last: 1) {
+        nodes {
+            ... AssignedDetails
+        }
+    }
+    labels(first: 10) {
+        edges {
+            node {
+                ...LabelDetails
+            }
+        }
+    }
+    repository {
+        name
+        url
+        isArchived
+        owner {
+            login
+        }
+    }
+}

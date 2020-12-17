@@ -1,0 +1,64 @@
+
+excluded:
+  - Carthage
+  - Pods
+  - Quests/API.swift
+
+disabled_rules:
+  # No autocorrect
+  - private_outlet # future projects should consider enabling this rule
+  - notification_center_detachment
+
+file_length: 750
+
+type_body_length: 350
+
+line_length: 200
+
+function_body_length: 125
+
+cyclomatic_complexity:
+  warning: 10
+  error: 15
+
+large_tuple:
+  warning: 3
+  error: 4
+
+identifier_name:
+  min_length:
+    warning: 2
+    error: 0
+  excluded:
+    - id
+    - dx
+    - dy
+    - x
+    - y
+    - i
+    - j
+    - k
+    - v
+    - r
+    - g
+    - b
+    - a
+
+opt_in_rules:
+  - closure_end_indentation
+  - closure_spacing
+  - empty_count
+  - explicit_init
+  - fatal_error_message
+  - first_where
+  - multiline_parameters
+  - operator_usage_whitespace
+  - overridden_super_call
+  - private_outlet
+  - trailing_closure
+  - unneeded_parentheses_in_closure_argument
+  - implicit_return
+  - prohibited_super_call
+  - redundant_nil_coalescing
+  - sorted_imports
+  - let_var_whitespace

@@ -1,0 +1,6 @@
+framework module Netable {
+  umbrella header "Netable-umbrella.h"
+
+  export *
+  module * { export * }
+}

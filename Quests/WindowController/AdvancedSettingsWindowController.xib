@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14865.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AdvancedSettingsWindowController" customModule="Quests" customModuleProvider="target">
+            <connections>
+                <outlet property="ignoreDoneToggle" destination="vrJ-PW-DWQ" id="eu8-AF-JqT"/>
+                <outlet property="ignoreStatusField" destination="ieE-7n-OBT" id="G7m-NP-tcJ"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="AqE-9N-ixD"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="4zX-DI-gCd">
+                        <rect key="frame" x="16" y="163" width="448" height="91"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lho-fg-Kse">
+                                <rect key="frame" x="-2" y="75" width="32" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="JIRA" id="7Uw-gv-jSX">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vrJ-PW-DWQ">
+                                <rect key="frame" x="6" y="51" width="436" height="18"/>
+                                <buttonCell key="cell" type="check" title="Ignore issues with &quot;Done&quot; status" bezelStyle="regularSquare" imagePosition="left" inset="2" id="XpO-IP-FGb">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="ignoreDoneToggled:" target="-2" id="dXW-bI-aB0"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nSR-Dq-RSu">
+                                <rect key="frame" x="6" y="29" width="436" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Ignore custom statuses:" id="eci-JT-QqG">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ieE-7n-OBT">
+                                <rect key="frame" x="16" y="0.0" width="424" height="21"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Enter statuses separated by commas eg. completed,design-blocked" drawsBackground="YES" id="fjU-Po-dDS">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="lho-fg-Kse" firstAttribute="leading" secondItem="4zX-DI-gCd" secondAttribute="leading" id="6RP-15-kPG"/>
+                            <constraint firstItem="ieE-7n-OBT" firstAttribute="trailing" secondItem="nSR-Dq-RSu" secondAttribute="trailing" id="8eJ-Ud-2kD"/>
+                            <constraint firstAttribute="trailing" secondItem="vrJ-PW-DWQ" secondAttribute="trailing" constant="8" id="EZT-HW-juA"/>
+                            <constraint firstItem="nSR-Dq-RSu" firstAttribute="leading" secondItem="vrJ-PW-DWQ" secondAttribute="leading" id="NYo-oI-L19"/>
+                            <constraint firstItem="nSR-Dq-RSu" firstAttribute="top" secondItem="vrJ-PW-DWQ" secondAttribute="bottom" constant="8" id="d5y-Lz-W4I"/>
+                            <constraint firstItem="vrJ-PW-DWQ" firstAttribute="top" secondItem="lho-fg-Kse" secondAttribute="bottom" constant="8" id="hgM-t6-v2G"/>
+                            <constraint firstItem="ieE-7n-OBT" firstAttribute="leading" secondItem="nSR-Dq-RSu" secondAttribute="leading" constant="8" id="juF-HB-ocK"/>
+                            <constraint firstItem="ieE-7n-OBT" firstAttribute="top" secondItem="nSR-Dq-RSu" secondAttribute="bottom" constant="8" id="m94-2m-tLr"/>
+                            <constraint firstAttribute="bottom" secondItem="ieE-7n-OBT" secondAttribute="bottom" id="mmy-dS-1T9"/>
+                            <constraint firstItem="nSR-Dq-RSu" firstAttribute="trailing" secondItem="vrJ-PW-DWQ" secondAttribute="trailing" id="oI7-zD-3yI"/>
+                            <constraint firstItem="vrJ-PW-DWQ" firstAttribute="leading" secondItem="4zX-DI-gCd" secondAttribute="leading" constant="8" id="tzx-eL-XAK"/>
+                            <constraint firstItem="lho-fg-Kse" firstAttribute="top" secondItem="4zX-DI-gCd" secondAttribute="top" id="yv3-DE-lWo"/>
+                        </constraints>
+                    </customView>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0hM-Og-Ccb">
+                        <rect key="frame" x="398" y="9" width="72" height="32"/>
+                        <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0DM-s5-rho">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="donePressed:" target="-2" id="il6-4K-APt"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="0hM-Og-Ccb" secondAttribute="trailing" constant="16" id="45f-5e-5Lc"/>
+                    <constraint firstAttribute="bottom" secondItem="0hM-Og-Ccb" secondAttribute="bottom" constant="16" id="7Dx-mG-tRu"/>
+                    <constraint firstItem="4zX-DI-gCd" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="16" id="JFY-Bs-FJW"/>
+                    <constraint firstItem="4zX-DI-gCd" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="16" id="Yb9-WF-RhH"/>
+                    <constraint firstAttribute="trailing" secondItem="4zX-DI-gCd" secondAttribute="trailing" constant="16" id="dh8-Ed-Gku"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="211" y="174"/>
+        </window>
+    </objects>
+</document>

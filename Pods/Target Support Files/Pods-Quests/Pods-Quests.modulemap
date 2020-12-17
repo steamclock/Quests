@@ -1,0 +1,6 @@
+framework module Pods_Quests {
+  umbrella header "Pods-Quests-umbrella.h"
+
+  export *
+  module * { export * }
+}

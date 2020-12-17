@@ -1,0 +1,23 @@
+query GetWatchedRepos($after: String) {
+    viewer {
+        watching(first: 50, after: $after) {
+            pageInfo {
+                hasNextPage
+                startCursor
+                endCursor
+            }
+            edges {
+                node {
+                    ... on Repository {
+                        name
+                        url
+                        isArchived
+                        owner {
+                            login
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NewVersionWindowController" customModule="Quests" customModuleProvider="target">
+            <connections>
+                <outlet property="notesLabel" destination="eVJ-mM-Lyo" id="gNn-m0-bcc"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="JtC-xX-Oh5"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="New Version Available" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" titleVisibility="hidden" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="163"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IPq-CG-5cO">
+                        <rect key="frame" x="16" y="87" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="J9N-LL-tXD"/>
+                            <constraint firstAttribute="height" constant="60" id="QcD-vP-026"/>
+                        </constraints>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="icon" id="Snc-lj-EeP"/>
+                    </imageView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FjH-zI-4wu">
+                        <rect key="frame" x="90" y="102" width="376" height="29"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="A New Version is Available!" id="8Zg-Sg-ygu">
+                            <font key="font" metaFont="system" size="24"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="k2e-MZ-dgK">
+                        <rect key="frame" x="369" y="9" width="101" height="32"/>
+                        <buttonCell key="cell" type="push" title="Download" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="8QN-Ls-68L">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <color key="contentTintColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                        <connections>
+                            <action selector="downloadPressed:" target="-2" id="79n-nQ-ZHL"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="O5M-ta-zAh">
+                        <rect key="frame" x="283" y="9" width="82" height="32"/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wkP-Rf-Jye">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="cancelPressed:" target="-2" id="Rwy-Em-X2p"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-mM-Lyo">
+                        <rect key="frame" x="90" y="53" width="376" height="17"/>
+                        <textFieldCell key="cell" selectable="YES" title="Multiline Label" id="J47-NC-knB">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="k2e-MZ-dgK" secondAttribute="bottom" constant="16" id="4T7-pd-CBa"/>
+                    <constraint firstItem="eVJ-mM-Lyo" firstAttribute="leading" secondItem="FjH-zI-4wu" secondAttribute="leading" id="9lM-7E-kut"/>
+                    <constraint firstItem="FjH-zI-4wu" firstAttribute="leading" secondItem="IPq-CG-5cO" secondAttribute="trailing" constant="16" id="EJZ-qA-K3Q"/>
+                    <constraint firstItem="eVJ-mM-Lyo" firstAttribute="trailing" secondItem="FjH-zI-4wu" secondAttribute="trailing" id="Hw4-bI-mKh"/>
+                    <constraint firstAttribute="trailing" secondItem="eVJ-mM-Lyo" secondAttribute="trailing" constant="16" id="IPk-kQ-Oon"/>
+                    <constraint firstAttribute="bottom" secondItem="O5M-ta-zAh" secondAttribute="bottom" constant="16" id="IeL-1Q-I80"/>
+                    <constraint firstItem="eVJ-mM-Lyo" firstAttribute="top" secondItem="FjH-zI-4wu" secondAttribute="bottom" constant="32" id="RoX-9Y-oq6"/>
+                    <constraint firstItem="IPq-CG-5cO" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="16" id="Wsk-OG-SK8"/>
+                    <constraint firstItem="k2e-MZ-dgK" firstAttribute="leading" secondItem="O5M-ta-zAh" secondAttribute="trailing" constant="16" id="dVX-Z9-rZO"/>
+                    <constraint firstAttribute="trailing" secondItem="k2e-MZ-dgK" secondAttribute="trailing" constant="16" id="rO5-QK-NdG"/>
+                    <constraint firstItem="FjH-zI-4wu" firstAttribute="centerY" secondItem="IPq-CG-5cO" secondAttribute="centerY" id="s5x-G1-fp9"/>
+                    <constraint firstItem="k2e-MZ-dgK" firstAttribute="top" secondItem="eVJ-mM-Lyo" secondAttribute="bottom" constant="16" id="w6f-Sd-Zsf"/>
+                    <constraint firstItem="IPq-CG-5cO" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="16" id="y09-eC-pFB"/>
+                </constraints>
+            </view>
+        </window>
+    </objects>
+    <resources>
+        <image name="icon" width="427" height="477"/>
+    </resources>
+</document>

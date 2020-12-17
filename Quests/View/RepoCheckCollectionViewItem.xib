@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="RepoCheckCollectionViewItem" customModule="Quests" customModuleProvider="target">
+            <connections>
+                <outlet property="checkButton" destination="f2O-ar-Bom" id="rhA-TK-Amz"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="whA-SX-2en"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY" userLabel="View">
+            <rect key="frame" x="0.0" y="0.0" width="220" height="14"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f2O-ar-Bom">
+                    <rect key="frame" x="8" y="-2" width="224" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="220" id="KQ7-Br-sNj"/>
+                    </constraints>
+                    <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="kmc-vx-rBs">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="buttonChecked:" target="-2" id="Ckr-Vy-LbA"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="f2O-ar-Bom" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="6JH-yY-Ykn"/>
+                <constraint firstAttribute="trailing" secondItem="f2O-ar-Bom" secondAttribute="trailing" constant="-10" id="QGx-Qz-fZ1"/>
+                <constraint firstAttribute="bottom" secondItem="f2O-ar-Bom" secondAttribute="bottom" id="cix-8i-WSg"/>
+                <constraint firstItem="f2O-ar-Bom" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="qJ3-Xj-h8U"/>
+            </constraints>
+            <point key="canvasLocation" x="13" y="47"/>
+        </customView>
+        <collectionViewItem id="hju-qv-guM" customClass="RepoCheckCollectionViewItem" customModule="Quests" customModuleProvider="target">
+            <connections>
+                <outlet property="checkButton" destination="f2O-ar-Bom" id="Zh5-au-JkY"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+</document>

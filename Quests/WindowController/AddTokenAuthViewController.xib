@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AddTokenAuthViewController" customModule="Quests" customModuleProvider="target">
+            <connections>
+                <outlet property="domainField" destination="2l4-iw-JIf" id="tjS-lk-K17"/>
+                <outlet property="goButton" destination="G1w-hM-ZyL" id="iog-b5-P9c"/>
+                <outlet property="reminderLabel" destination="NlM-J5-B8P" id="udc-hB-fVX"/>
+                <outlet property="reminderLabelSecondary" destination="mhW-Kg-MJG" id="tN7-fe-oyB"/>
+                <outlet property="sourceImage" destination="1oq-Lm-vFg" id="bbz-mF-eYK"/>
+                <outlet property="tokenField" destination="Ffh-fQ-526" id="68L-fn-kw0"/>
+                <outlet property="userDomainFields" destination="eXh-TV-caM" id="AhQ-HH-OZw"/>
+                <outlet property="userField" destination="pPj-ay-5MA" id="ORy-Ga-upA"/>
+                <outlet property="view" destination="rcR-nm-raK" id="km3-7v-bIB"/>
+                <outlet property="visitSourceButton" destination="Cc4-7Q-hI3" id="Rhc-aM-TkX"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="rcR-nm-raK">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="350"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vVN-lg-s2f">
+                    <rect key="frame" x="16" y="318" width="72" height="16"/>
+                    <buttonCell key="cell" type="roundRect" title="Start Over" bezelStyle="roundedRect" image="NSGoBackTemplate" imagePosition="leading" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="Xg0-Rx-viF">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="cellTitle"/>
+                    </buttonCell>
+                    <color key="contentTintColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
+                    <connections>
+                        <action selector="startOverPressed:" target="-2" id="tqe-Tv-Wab"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="G1w-hM-ZyL">
+                    <rect key="frame" x="453" y="9" width="155" height="32"/>
+                    <buttonCell key="cell" type="push" title="Start Using Quests" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BpF-NX-vCM">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="goPressed:" target="-2" id="Vwb-5k-IJL"/>
+                    </connections>
+                </button>
+                <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0TJ-Jz-oxD">
+                    <rect key="frame" x="16" y="55" width="586" height="289"/>
+                    <subviews>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1oq-Lm-vFg">
+                            <rect key="frame" x="245" y="193" width="96" height="96"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="96" id="KIR-V0-Zgz"/>
+                                <constraint firstAttribute="height" constant="96" id="ezL-Lb-Dwd"/>
+                            </constraints>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Github-Large" id="7lN-wg-0vy"/>
+                        </imageView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F1W-k7-BMg">
+                            <rect key="frame" x="242" y="155" width="102" height="22"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Add Source" id="txp-Rn-2bN">
+                                <font key="font" metaFont="systemSemibold" size="18"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rUQ-11-F2E">
+                            <rect key="frame" x="101" y="105" width="385" height="34"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NlM-J5-B8P">
+                                    <rect key="frame" x="-2" y="17" width="389" height="17"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="You'll need to generate a new personal access token." id="bTc-7w-gCt">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mhW-Kg-MJG">
+                                    <rect key="frame" x="-2" y="0.0" width="389" height="17"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Make sure you check repo access when selecting token scope." id="zrQ-hs-dMd">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="mhW-Kg-MJG" firstAttribute="centerX" secondItem="rUQ-11-F2E" secondAttribute="centerX" id="95W-gL-3Gx"/>
+                                <constraint firstItem="NlM-J5-B8P" firstAttribute="centerX" secondItem="rUQ-11-F2E" secondAttribute="centerX" id="qRZ-El-BZY"/>
+                            </constraints>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Cc4-7Q-hI3">
+                            <rect key="frame" x="199" y="61" width="188" height="32"/>
+                            <buttonCell key="cell" type="push" title="Visit GitHub to Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JNR-qT-TCZ">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="visitSourcePressed:" target="-2" id="tH9-Ap-eaS"/>
+                            </connections>
+                        </button>
+                        <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9k5-To-JRL">
+                            <rect key="frame" x="0.0" y="0.0" width="586" height="52"/>
+                            <subviews>
+                                <stackView distribution="fillEqually" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eXh-TV-caM">
+                                    <rect key="frame" x="0.0" y="30" width="586" height="22"/>
+                                    <subviews>
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pPj-ay-5MA" customClass="PastableTextField" customModule="Quests" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="289" height="22"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Account Email" bezelStyle="round" id="etQ-Cd-bLs">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2l4-iw-JIf" customClass="PastableTextField" customModule="Quests" customModuleProvider="target">
+                                            <rect key="frame" x="297" y="0.0" width="289" height="22"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Domain Name" bezelStyle="round" id="sPt-JW-1Hi">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                    <visibilityPriorities>
+                                        <integer value="1000"/>
+                                        <integer value="1000"/>
+                                    </visibilityPriorities>
+                                    <customSpacing>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                    </customSpacing>
+                                </stackView>
+                                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ffh-fQ-526" customClass="PastableTextField" customModule="Quests" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="586" height="22"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Paste your personal access token here" bezelStyle="round" id="0db-1d-x6s">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Ffh-fQ-526" firstAttribute="leading" secondItem="9k5-To-JRL" secondAttribute="leading" id="AM0-bw-aae"/>
+                                <constraint firstAttribute="trailing" secondItem="Ffh-fQ-526" secondAttribute="trailing" id="D2B-Qs-0YM"/>
+                                <constraint firstItem="eXh-TV-caM" firstAttribute="leading" secondItem="9k5-To-JRL" secondAttribute="leading" id="Dyz-zh-Izy"/>
+                                <constraint firstAttribute="trailing" secondItem="eXh-TV-caM" secondAttribute="trailing" id="sf8-DR-0Nd"/>
+                            </constraints>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="9k5-To-JRL" firstAttribute="leading" secondItem="0TJ-Jz-oxD" secondAttribute="leading" id="WV4-S9-PKt"/>
+                        <constraint firstAttribute="trailing" secondItem="9k5-To-JRL" secondAttribute="trailing" id="b73-lN-dpI"/>
+                    </constraints>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="0TJ-Jz-oxD" firstAttribute="centerY" secondItem="rcR-nm-raK" secondAttribute="centerY" constant="-24" id="Gfq-Hz-3SN"/>
+                <constraint firstAttribute="trailing" secondItem="G1w-hM-ZyL" secondAttribute="trailing" constant="16" id="Kpy-vY-5yH"/>
+                <constraint firstItem="vVN-lg-s2f" firstAttribute="top" secondItem="rcR-nm-raK" secondAttribute="top" constant="16" id="UoS-R7-oVB"/>
+                <constraint firstAttribute="trailing" secondItem="0TJ-Jz-oxD" secondAttribute="trailing" constant="16" id="VHz-Re-Lus"/>
+                <constraint firstItem="0TJ-Jz-oxD" firstAttribute="centerX" secondItem="rcR-nm-raK" secondAttribute="centerX" id="fOq-xU-Bs0"/>
+                <constraint firstAttribute="bottom" secondItem="G1w-hM-ZyL" secondAttribute="bottom" constant="16" id="lyx-45-mhT"/>
+                <constraint firstItem="0TJ-Jz-oxD" firstAttribute="leading" secondItem="rcR-nm-raK" secondAttribute="leading" constant="16" id="qZd-f7-0wv"/>
+                <constraint firstItem="vVN-lg-s2f" firstAttribute="leading" secondItem="rcR-nm-raK" secondAttribute="leading" constant="16" id="sro-GV-EHF"/>
+            </constraints>
+            <point key="canvasLocation" x="125" y="45.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="Github-Large" width="96" height="96"/>
+        <image name="NSGoBackTemplate" width="9" height="12"/>
+    </resources>
+</document>

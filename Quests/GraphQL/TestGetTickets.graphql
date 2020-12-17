@@ -1,0 +1,19 @@
+query TestGetTickets($queryString: String!) {
+search(first: 1, type: ISSUE, query: $queryString) {
+issueCount
+pageInfo {
+hasNextPage
+endCursor
+}
+edges {
+node {
+... on PullRequest {
+...PRDetails
+}
+... on Issue {
+...IssueDetails
+}
+}
+}
+}
+}

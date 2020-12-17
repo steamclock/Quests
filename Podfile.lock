@@ -1,0 +1,72 @@
+PODS:
+  - Alamofire (4.9.1)
+  - CwlUtils (2.2.0)
+  - Down (0.9.4)
+  - Netable (0.10.2)
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
+  - ReachabilitySwift (5.0.0)
+  - SnapKit (5.0.1)
+  - SwiftLint (0.42.0)
+  - SwiftyJSON (5.0.0)
+  - SwiftyUserDefaults (4.0.0)
+  - Valet (4.1.1)
+  - XCGLogger (6.1.0):
+    - XCGLogger/Core (= 6.1.0)
+  - XCGLogger/Core (6.1.0):
+    - ObjcExceptionBridging
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - CwlUtils (from `https://github.com/mattgallagher/CwlUtils.git`)
+  - Down
+  - Netable
+  - ReachabilitySwift
+  - SnapKit
+  - SwiftLint
+  - SwiftyJSON
+  - SwiftyUserDefaults (~> 4.0)
+  - Valet
+  - XCGLogger (~> 6.1.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Down
+    - Netable
+    - ObjcExceptionBridging
+    - ReachabilitySwift
+    - SnapKit
+    - SwiftLint
+    - SwiftyJSON
+    - SwiftyUserDefaults
+    - Valet
+    - XCGLogger
+
+EXTERNAL SOURCES:
+  CwlUtils:
+    :git: https://github.com/mattgallagher/CwlUtils.git
+
+CHECKOUT OPTIONS:
+  CwlUtils:
+    :commit: 0bfc4587d01cfc796b6c7e118fc631333dd8ab33
+    :git: https://github.com/mattgallagher/CwlUtils.git
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  CwlUtils: 33e0095342412c8fcde26dc3a21326ab125a762c
+  Down: 276f2c3eeeaf30345873bdad25f44b2640fcfa3a
+  Netable: f6cd47f79aa133c63a83c3f5015f35b310f1d05f
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  SwiftyUserDefaults: 6a1951df1daa19337862b677dd9a4b9bd4c288cd
+  Valet: 11ab0e318b7284888a81392e36136563b4af5deb
+  XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
+
+PODFILE CHECKSUM: 468987039732bf8f93fc1bced1ef05984ee6e15c
+
+COCOAPODS: 1.9.3
