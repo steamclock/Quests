@@ -10,7 +10,23 @@ Using XCode 12 is encouraged, remember to open `Quests.xcworkspace` rather than 
 
 ### Cloning/Building Locally
 
-Bundler install, etc
+1. Install or update to the latest version of Bundler with:
+
+```bash
+gem install bundler
+```
+
+2. In the project root directory, install the dependencies specified in the Gemfile.
+
+```bash
+bundle install
+```
+
+3. In the project root directory, install dependencies specified in the Podfile.
+
+```bash
+bundle exec pod install --repo-update
+```
 
 There seems to be some issues with [Apollo-iOS](https://github.com/apollographql/apollo-ios) and outdated version of NPM that will prevent people from building Quests locally.
 
