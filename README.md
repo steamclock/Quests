@@ -1,4 +1,5 @@
 ![Quests: Issue and PR tracking in your menu bar](https://raw.githubusercontent.com/steamclock/Quests/master/quests.png)
+
 ![Quests supports dark mode and light mode!](https://raw.githubusercontent.com/steamclock/Quests/master/quests_preview.png)
 
 Quests is a MacOS tool written in Swift for versions 10.14 and up designed to track issue and PR status in your menu bar. It currently works with GitHub, GitLab and JIRA and is available [on the Mac App Store](https://apps.apple.com/ca/app/quests/id1447415753?mt=12).
