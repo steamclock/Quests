@@ -1,3 +1,6 @@
+## [1.2.1] - 5-1-20
+- Fixed an issue that was preventing Valet from storing or retrieving tokens.
+
 ## [1.2.0] - 15-12-20
 - Fixed menu bar coloring on Big Sur.
 - Repos should now consistently appear in alphabetical order.

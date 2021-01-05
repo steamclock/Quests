@@ -100,10 +100,15 @@ class NetworkCoordinator {
                     token: token,
                     username: username,
                     onSuccess: {
-                        DefaultsKeys.add(token: newToken)
-                        try? Valet.shared.setString(token, forKey: newToken.key)
-                        AnalyticsModel.shared.tokenAdded(source: source)
-                        onSuccess()
+
+                        do {
+                            try Valet.shared.setString(token, forKey: newToken.key)
+                            DefaultsKeys.add(token: newToken)
+                            AnalyticsModel.shared.tokenAdded(source: source)
+                            onSuccess()
+                        } catch let keychainError {
+                            onFailure(NetworkError(statusCode: 002, message: keychainError.localizedDescription))
+                        }
                     },
                     onFailure: { error in
                         // It's kind of janky, but we need to pass the username back here
