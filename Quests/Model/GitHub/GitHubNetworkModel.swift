@@ -197,7 +197,12 @@ class GitHubNetworkModel: SourceNetworkModel {
             tickets: [Repository: [Ticket]],
             onSuccess: @escaping ([Repository: [Ticket]]) -> Void,
             onFailure: @escaping (NetableError) -> Void) {
-        client(for: token)?.fetch(query: GetTicketsQuery(queryString: query, after: after), cachePolicy: .fetchIgnoringCacheData) { result in
+        guard let client = client(for: token) else {
+            onFailure(NetableError.httpError(001, "Failed to get client, probably due to a token error.".data(using: .utf8)))
+            return
+        }
+
+        client.fetch(query: GetTicketsQuery(queryString: query, after: after), cachePolicy: .fetchIgnoringCacheData) { result in
             var newTickets = tickets
             if result.error != nil {
                 if let graphError = result.error as? GraphQLHTTPResponseError {
