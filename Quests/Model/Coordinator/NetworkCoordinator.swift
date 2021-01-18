@@ -140,11 +140,14 @@ class NetworkCoordinator {
             }
         }
 
+        LogManager.shared.log("Started getWatchedRepos request.")
+
         for token in Defaults[.tokens] {
             queriesToRun += 1
             getNetworkModel(for: token.source).getWatchedRepos(
                 token: token,
                 onSuccess: { repos in
+                    LogManager.shared.log("getWatchedRepos request completed for \(token.source.title)")
                     self.tokenErrors[token] = []
                     allRepos.append(contentsOf: repos)
                     queryComplete()
@@ -231,6 +234,7 @@ class NetworkCoordinator {
         }
 
         AnalyticsModel.shared.networkErrorOccured(networkError.statusCode, message: "\(source.title) error: \(networkError.message)")
+        LogManager.shared.log("Network error occurred: \(networkError.statusCode) \(source.title) \(networkError.message)")
 
         return networkError
     }

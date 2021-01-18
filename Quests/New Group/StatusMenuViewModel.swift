@@ -340,6 +340,7 @@ class StatusMenuViewModel {
         var issueCount = 0
         var prCount = 0
 
+        LogManager.shared.log("Starting updateStoredInfo")
         for (repo, tickets) in ticketsByRepo {
             guard !Defaults[.ignoredRepos].contains(repo.name) else {
                 continue
@@ -364,6 +365,8 @@ class StatusMenuViewModel {
         var added = [Ticket]()
         var removed = [Ticket]()
 
+        LogManager.shared.log("Started calculating tickets diff")
+
         let oldTickets = ticketsByRepo
             .filter { !Defaults[.ignoredRepos].contains($0.key.name) }
             .flatMap { $0.value }
@@ -379,13 +382,14 @@ class StatusMenuViewModel {
         for newTicket in newTickets where !oldTickets.contains(where: { $0.url == newTicket.url }) {
             added.append(newTicket)
         }
-
+        LogManager.shared.log("Finished calculating tickets diff")
         return (added, removed)
     }
 
     private func convertTicketsToMenu() -> NSMenu {
         let menu = NSMenu()
 
+        LogManager.shared.log("Start converting tickets to menu.")
         UpdateModel.shared.checkForBatsignal(
             onSuccess: { batsignal in
                 if let batsignal = batsignal, !batsignal.title.isEmpty {
@@ -421,6 +425,8 @@ class StatusMenuViewModel {
             return lname < rname
         }
 
+        LogManager.shared.log("Finished sorting tickets in convertTicketsToMenu, starting to create menu items.")
+
         for (repo, tickets) in sortedTickets {
             totalTicketCount += tickets.count
             guard !Defaults[.ignoredRepos].contains(repo.name) else {
@@ -437,7 +443,7 @@ class StatusMenuViewModel {
             repoItem.representedObject = repo
             menu.addItem(repoItem)
 
-            // Sort our tickets based first on type, then date created
+                                                  // Sort our tickets based first on type, then date created
             let sortedTickets = tickets.sorted {
                 if $0.type == $1.type {
                     return $0.updatedAt > $1.updatedAt
@@ -461,6 +467,7 @@ class StatusMenuViewModel {
             menu.addItem(nestedMenuItem)
             menu.setSubmenu(nestedMenu, for: nestedMenuItem)
 
+            LogManager.shared.log("Adding ticket menu items for \(repo.source)")
             for ticket in nestedTickets {
                 nestedMenu.addItem(TicketMenuItem(from: ticket, length: ticketLength))
             }
@@ -480,6 +487,7 @@ class StatusMenuViewModel {
         }
         menu.addItem(settingsMenuItem)
         menu.addItem(quitMenuItem)
+        LogManager.shared.log("Finished converting tickets to menu")
         return menu
     }
 
