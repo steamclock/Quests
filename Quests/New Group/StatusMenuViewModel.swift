@@ -116,6 +116,7 @@ class StatusMenuViewModel {
 
     @objc private func getTickets() {
         AnalyticsModel.shared.logDailyUse()
+        LogManager.shared.log("getTickets started.")
 
         var gotWatchedRepos = false
         var gotReposWithTickets = false
@@ -134,12 +135,15 @@ class StatusMenuViewModel {
         func gotRepos(source: RepoSource, repos: [Repository]) {
             switch source {
             case .tickets: gotReposWithTickets = true
+                LogManager.shared.log("Got repos with tickets, count: \(repos.count)")
             case .watched: gotWatchedRepos = true
+                LogManager.shared.log("Got watched repos, count: \(repos.count)")
             }
 
             allRepos = allRepos.union(Set(repos))
 
             if gotReposWithTickets && gotWatchedRepos {
+                LogManager.shared.log("Got all repos, sorting and storing.")
                 self.delegate?.statusMenuVMDelegate(
                     self,
                     updatedRepos: RepoOwner.sortRepos(Array(allRepos))
@@ -147,6 +151,7 @@ class StatusMenuViewModel {
             }
         }
 
+        // TODO: We probably don't need to do this every time we load tickets if it's just used for populating settings.
         NetworkCoordinator.shared.getWatchedRepos(
             onSuccess: { repos in
                 gotRepos(source: .watched, repos: repos)
@@ -215,6 +220,24 @@ class StatusMenuViewModel {
                 },
                 { // ... }
             ]
+
+         JSON Generator is great for this:
+         [
+           '{{repeat(150, 270)}}',
+            {
+                 repoName: '{{random("test 1", "test 2","test3", "test4", "test 21", "test 21")}}',
+                 name: '{{objectId()}}',
+                 type: '{{random(1, 2,3,1,2,1,2)}}',
+                 source: "GitHub",
+                 labels: [
+                                 '{{repeat(0,3)}}',
+                     {
+                         "title": '{{firstName()}}',
+                         "color": "FFFFFF"
+                     }
+                 ]
+             }
+         ]
         */
         if let path = Bundle.main.path(forResource: "mockdata", ofType: "json") {
             do {

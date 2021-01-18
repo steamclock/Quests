@@ -167,6 +167,7 @@ class NetworkCoordinator {
             queriesToRun -= 1
 
             if queriesToRun == 0 {
+                LogManager.shared.log("All tickets queries complete, returning")
                 onSuccess(allTickets)
             }
         }
@@ -184,9 +185,11 @@ class NetworkCoordinator {
         for token in Defaults[.tokens] {
             queriesToRun += 1
 
+            LogManager.shared.log("Get tickets started for: \(token.source)")
             getNetworkModel(for: token.source).getTickets(
                 token: token,
                 onSuccess: { tickets in
+                    LogManager.shared.log("Get tickets successful for: \(token.source)")
                     self.tokenErrors[token] = []
                     allTickets.merge(tickets) { old, new in
                         var oldCopy = old
@@ -196,9 +199,11 @@ class NetworkCoordinator {
                     queryComplete()
                 }, onFailure: { error in
                     queriesToRun -= 1
+                    LogManager.shared.log("Get tickets failed for: \(token.source)")
                     let processedError = self.process(error, source: token.source)
                     self.add(error: processedError, toToken: token)
                     onFailure(processedError)
+                    queryComplete()
                 }
             )
         }
