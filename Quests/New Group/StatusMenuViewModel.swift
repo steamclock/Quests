@@ -296,8 +296,6 @@ class StatusMenuViewModel {
         menu.addItem(self.settingsMenuItem)
         menu.addItem(quitMenuItem)
 
-        print("==== checking here")
-
         UpdateModel.shared.checkForBatsignal(
             onSuccess: { batsignal in
                 if let batsignal = batsignal, !batsignal.title.isEmpty {
