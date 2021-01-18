@@ -1,3 +1,6 @@
+## UNRELEASED
+- Only reload the batsignal message every hour instead of every time tickets are checked.
+
 ## [1.2.1] - 5-1-20
 - Fixed an issue that was preventing Valet from storing or retrieving tokens.
 

@@ -69,6 +69,8 @@ class UpdateModel {
 
     private let updateAPI: Netable
     private let currentVersion: String
+    private var batsignal: Batsignal?
+    private var batsignalRetrievedAt: Date?
 
     private init() {
         updateAPI = Netable(baseURL: URL(string: "https://quests-beta.netlify.com/")!)
@@ -77,9 +79,17 @@ class UpdateModel {
     }
 
     func checkForBatsignal(onSuccess: @escaping (Batsignal?) -> Void, onFailure: @escaping (NetableError) -> Void) {
+        if let batsignal = batsignal, let batsignalDate = batsignalRetrievedAt,
+                batsignalDate.timeIntervalSinceNow > -3600 { // Only update every hour
+            onSuccess(batsignal)
+            return
+        }
+
         updateAPI.request(CheckForBatsignal()) { result in
             switch result {
             case .success(let batsignal):
+                self.batsignal = batsignal
+                self.batsignalRetrievedAt = Date()
                 onSuccess(batsignal)
             case .failure(let error):
                 onFailure(error)
