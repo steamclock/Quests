@@ -140,11 +140,14 @@ class NetworkCoordinator {
             }
         }
 
+        LogManager.shared.log("Started getWatchedRepos request.")
+
         for token in Defaults[.tokens] {
             queriesToRun += 1
             getNetworkModel(for: token.source).getWatchedRepos(
                 token: token,
                 onSuccess: { repos in
+                    LogManager.shared.log("getWatchedRepos request completed for \(token.source.title)")
                     self.tokenErrors[token] = []
                     allRepos.append(contentsOf: repos)
                     queryComplete()
@@ -167,6 +170,7 @@ class NetworkCoordinator {
             queriesToRun -= 1
 
             if queriesToRun == 0 {
+                LogManager.shared.log("All tickets queries complete, returning")
                 onSuccess(allTickets)
             }
         }
@@ -184,9 +188,11 @@ class NetworkCoordinator {
         for token in Defaults[.tokens] {
             queriesToRun += 1
 
+            LogManager.shared.log("Get tickets started for: \(token.source)")
             getNetworkModel(for: token.source).getTickets(
                 token: token,
                 onSuccess: { tickets in
+                    LogManager.shared.log("Get tickets successful for: \(token.source)")
                     self.tokenErrors[token] = []
                     allTickets.merge(tickets) { old, new in
                         var oldCopy = old
@@ -195,10 +201,11 @@ class NetworkCoordinator {
                     }
                     queryComplete()
                 }, onFailure: { error in
-                    queriesToRun -= 1
+                    LogManager.shared.log("Get tickets failed for: \(token.source)")
                     let processedError = self.process(error, source: token.source)
                     self.add(error: processedError, toToken: token)
                     onFailure(processedError)
+                    queryComplete()
                 }
             )
         }
@@ -226,6 +233,7 @@ class NetworkCoordinator {
         }
 
         AnalyticsModel.shared.networkErrorOccured(networkError.statusCode, message: "\(source.title) error: \(networkError.message)")
+        LogManager.shared.log("Network error occurred: \(networkError.statusCode) \(source.title) \(networkError.message)")
 
         return networkError
     }
