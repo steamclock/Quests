@@ -443,7 +443,7 @@ class StatusMenuViewModel {
             repoItem.representedObject = repo
             menu.addItem(repoItem)
 
-                                                  // Sort our tickets based first on type, then date created
+            // Sort our tickets based first on type, then date created
             let sortedTickets = tickets.sorted {
                 if $0.type == $1.type {
                     return $0.updatedAt > $1.updatedAt
