@@ -201,7 +201,6 @@ class NetworkCoordinator {
                     }
                     queryComplete()
                 }, onFailure: { error in
-                    queriesToRun -= 1
                     LogManager.shared.log("Get tickets failed for: \(token.source)")
                     let processedError = self.process(error, source: token.source)
                     self.add(error: processedError, toToken: token)
