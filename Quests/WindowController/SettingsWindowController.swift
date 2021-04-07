@@ -58,8 +58,6 @@ class SettingsWindowController: NSWindowController, NSWindowDelegate {
     // MARK: About Window
     @IBOutlet private var repoCollectionView: NSCollectionView?
     @IBOutlet private var versionLabel: NSTextField!
-    @IBOutlet private var checkForUpdatesButton: NSButton!
-    @IBOutlet private var lastCheckedLabel: NSTextField!
 
     weak var delegate: SettingsWindowDelegate?
     var repos = [RepoOwner]() {
@@ -136,8 +134,6 @@ class SettingsWindowController: NSWindowController, NSWindowDelegate {
         versionLabel.setToLabel()
         versionLabel.stringValue = "v" + Bundle.versionString
 
-        updateLastCheckedLabel()
-
         showLoading(true)
 
         NotificationCenter.default.addObserver(
@@ -203,7 +199,6 @@ class SettingsWindowController: NSWindowController, NSWindowDelegate {
 
     @IBAction func checkForUpdates(_ sender: NSButton) {
         delegate?.settingsWindowShouldCheckUpdates(self)
-        updateLastCheckedLabel()
     }
 
     @IBAction func sendFeedbackPressed(_ sender: NSButton) {
@@ -324,29 +319,6 @@ class SettingsWindowController: NSWindowController, NSWindowDelegate {
 
         accountsTableView.reloadData()
         repoCollectionView?.reloadData()
-    }
-
-    private func updateLastCheckedLabel() {
-        guard UpdateModel.shared.appSource() != .appStore else {
-            lastCheckedLabel.isHidden = true
-            lastCheckedLabel.snp.remakeConstraints { make in
-                make.height.equalTo(0)
-            }
-            checkForUpdatesButton.isHidden = true
-            checkForUpdatesButton.snp.remakeConstraints { make in
-                make.height.equalTo(0)
-            }
-            return
-        }
-
-        lastCheckedLabel.stringValue = "Last Checked "
-        if let lastCheckDate = Defaults[.updateLastChecked] {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "EEEE, MMM d HH:mm"
-            lastCheckedLabel.stringValue += formatter.string(from: lastCheckDate)
-        } else {
-            lastCheckedLabel.stringValue += "Never"
-        }
     }
 
     private func setEmptyCollectionLabel(hidden: Bool) {
