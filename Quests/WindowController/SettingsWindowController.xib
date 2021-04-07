@@ -37,7 +37,7 @@
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <tabView misplaced="YES" allowsTruncatedLabels="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meW-RU-lIX">
-                        <rect key="frame" x="9" y="6" width="514" height="325"/>
+                        <rect key="frame" x="10" y="3" width="514" height="325"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="320" id="FiP-V3-85e"/>
                             <constraint firstAttribute="width" constant="500" id="oiP-xN-KtC"/>
@@ -254,10 +254,10 @@
                                             <rect key="frame" x="16" y="97" width="462" height="177"/>
                                             <clipView key="contentView" ambiguous="YES" id="Aly-AZ-B5b">
                                                 <rect key="frame" x="1" y="1" width="460" height="175"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="41" viewBased="YES" id="VwP-y8-IHr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="468" height="175"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="488" height="175"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -482,10 +482,10 @@ EEFib3V0A
                                             </connections>
                                         </button>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oSS-Dk-yJG">
-                                            <rect key="frame" x="16" y="82" width="300" height="160"/>
+                                            <rect key="frame" x="16" y="112" width="244" height="130"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="160" id="Mnn-iY-nbP"/>
-                                                <constraint firstAttribute="width" constant="300" id="qXb-ht-f3G"/>
+                                                <constraint firstAttribute="width" secondItem="oSS-Dk-yJG" secondAttribute="height" multiplier="15:8" id="3H2-NL-a43"/>
+                                                <constraint firstAttribute="height" constant="130" id="Mnn-iY-nbP"/>
                                             </constraints>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="settings_logo" id="cwl-lP-jk0"/>
                                         </imageView>
