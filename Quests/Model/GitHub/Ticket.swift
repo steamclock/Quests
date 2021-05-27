@@ -34,10 +34,8 @@ enum TicketType: Int, Decodable {
 
     var image: NSImage? {
         switch self {
-        case .authored: return NSImage(named: NSImage.Name(rawValue: "Pull-Request-Authored"))
         case .issue: return nil
-        case .pullRequest: return NSImage(named: NSImage.Name(rawValue: "Pull-Request"))
-        case .reviewRequest: return NSImage(named: NSImage.Name(rawValue: "Review-Request"))
+        default: return NSImage(named: NSImage.Name(rawValue: imageName))
         }
     }
 
@@ -46,6 +44,15 @@ enum TicketType: Int, Decodable {
         case .authored, .pullRequest: return "Pull Request"
         case .issue: return "Issue"
         case .reviewRequest: return "Review Request"
+        }
+    }
+
+    var imageName: String {
+        switch self {
+        case .authored: return "Pull-Request-Authored"
+        case .issue: return "Issue"
+        case .pullRequest: return "Pull-Request"
+        case .reviewRequest: return "Review-Request"
         }
     }
 }

@@ -144,12 +144,12 @@ class StatusBarView: NSView {
             tintColor = NSColor.isDarkMode ? NSColor.white : (isHighlighted ? NSColor.white : NSColor.black)
         }
 
-        issueImageView.image = issueImage.imageWithTintColor(tintColor: tintColor)
+        issueImageView.image = issueImage.imageWithTintColor(tintColor: tintColor, imageName: "Issue")
         issueLabel.textColor = tintColor
 
-        separatorImageView.image = separatorImage.imageWithTintColor(tintColor: tintColor)
+        separatorImageView.image = separatorImage.imageWithTintColor(tintColor: tintColor, imageName: "separator")
 
-        prImageView.image = prImage.imageWithTintColor(tintColor: tintColor)
+        prImageView.image = prImage.imageWithTintColor(tintColor: tintColor, imageName: "Pull-Request")
         prLabel.textColor = tintColor
     }
 }
