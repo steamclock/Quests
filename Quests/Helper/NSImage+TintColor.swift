@@ -25,11 +25,13 @@
 import Cocoa
 
 extension NSImage {
-    func imageWithTintColor(tintColor: NSColor) -> NSImage {
-        guard self.isTemplate == true, let image = self.copy() as? NSImage else {
+    func imageWithTintColor(tintColor: NSColor, imageName: String) -> NSImage {
+        guard self.isTemplate == true,
+              let image = NSImage(named: NSImage.Name(rawValue: imageName)) else {
             return self
         }
 
+        image.isTemplate = true
         image.lockFocus()
 
         tintColor.set()

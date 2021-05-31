@@ -46,7 +46,7 @@ class TicketMenuItemView: NSView {
         }
 
         if let image = ticket.type.image {
-            imageView.image = image.imageWithTintColor(tintColor: NSColor.ThemeColor.text)
+            imageView.image = image.imageWithTintColor(tintColor: NSColor.ThemeColor.text, imageName: ticket.type.imageName)
             imageView.snp.remakeConstraints { make in
                 make.left.equalToSuperview().offset(15)
                 make.centerY.equalToSuperview()
@@ -124,7 +124,7 @@ class TicketMenuItemView: NSView {
 
         if let image = ticket.type.image {
             image.isTemplate = true
-            imageView.image = ticket.type.image?.imageWithTintColor(tintColor: on ? NSColor.ThemeColor.highlightedText : NSColor.ThemeColor.text)
+            imageView.image = ticket.type.image?.imageWithTintColor(tintColor: on ? NSColor.ThemeColor.highlightedText : NSColor.ThemeColor.text, imageName: ticket.type.imageName)
         }
     }
 }
