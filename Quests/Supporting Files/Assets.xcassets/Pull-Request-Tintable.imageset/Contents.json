@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Issue-1.pdf",
+      "filename" : "Pull-Request-1.pdf",
       "idiom" : "universal"
     },
     {
@@ -11,7 +11,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "Issue.pdf",
+      "filename" : "Pull-Request.pdf",
       "idiom" : "universal"
     },
     {
@@ -21,7 +21,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Issue_White.pdf",
+      "filename" : "PR_White.pdf",
       "idiom" : "universal"
     }
   ],

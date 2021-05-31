@@ -49,10 +49,10 @@ enum TicketType: Int, Decodable {
 
     var imageName: String {
         switch self {
-        case .authored: return "Pull-Request-Authored"
-        case .issue: return "Issue"
-        case .pullRequest: return "Pull-Request"
-        case .reviewRequest: return "Review-Request"
+        case .authored: return "Pull-Request-Authored-Tintable"
+        case .issue: return "Issue-Tintable"
+        case .pullRequest: return "Pull-Request-Tintable"
+        case .reviewRequest: return "Review-Request-Tintable"
         }
     }
 }

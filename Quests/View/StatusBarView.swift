@@ -52,8 +52,7 @@ class StatusBarView: NSView {
             make.top.bottom.left.equalToSuperview()
         }
 
-        issueImage = NSImage(named: NSImage.Name("Issue"))!
-        issueImage.isTemplate = true
+        issueImage = NSImage(named: NSImage.Name("Issue"))
         issueImageView = NSImageView(image: issueImage)
         issueImageView.wantsLayer = true
         containerView.addSubview(issueImageView)
@@ -84,8 +83,7 @@ class StatusBarView: NSView {
             make.left.equalTo(issueLabel.snp.right).offset(2)
         }
 
-        prImage = NSImage(named: NSImage.Name("Pull-Request"))!
-        prImage.isTemplate = true
+        prImage = NSImage(named: NSImage.Name("Pull-Request"))
         prImageView = NSImageView(image: prImage)
         prImageView.wantsLayer = true
         containerView.addSubview(prImageView)
@@ -129,27 +127,5 @@ class StatusBarView: NSView {
         containerView.layoutSubtreeIfNeeded()
 
         frame = NSRect(origin: frame.origin, size: CGSize(width: containerView.frame.width, height: frame.height))
-    }
-
-    override func draw(_ dirtyRect: NSRect) {
-        guard let isHighlighted = self.parent?.isHighlighted else {
-            return
-        }
-
-        let tintColor: NSColor
-
-        if #available(macOS 11, *) {
-            tintColor = NSColor.isDarkMode ? NSColor.white : NSColor.black
-        } else {
-            tintColor = NSColor.isDarkMode ? NSColor.white : (isHighlighted ? NSColor.white : NSColor.black)
-        }
-
-        issueImageView.image = issueImage.imageWithTintColor(tintColor: tintColor, imageName: "Issue")
-        issueLabel.textColor = tintColor
-
-        separatorImageView.image = separatorImage.imageWithTintColor(tintColor: tintColor, imageName: "separator")
-
-        prImageView.image = prImage.imageWithTintColor(tintColor: tintColor, imageName: "Pull-Request")
-        prLabel.textColor = tintColor
     }
 }
