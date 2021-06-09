@@ -1,6 +1,9 @@
 ## UNRELEASED
 - Only reload the batsignal message every hour instead of every time tickets are checked.
 
+## [1.2.4] - 9-6-21
+- Fixed issue that was leading to high CPU usage.
+
 ## [1.2.3] - 7-4-21
 - Add logo and thanks to the open source community to the about page.
 
