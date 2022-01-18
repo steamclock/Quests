@@ -25,24 +25,9 @@
 import Cocoa
 
 extension NSColor {
-    static var isDarkMode: Bool {
-        if #available(macOS 11, *) {
-            let item = NSStatusBar.system.statusItem(withLength: 1)
-            if let name = item.button?.effectiveAppearance.name.rawValue.lowercased() {
-                return name.contains("dark")
-            }
-        } else {
-            let mode = UserDefaults.standard.string(forKey: "AppleInterfaceStyle")
-            return mode == "Dark"
-        }
-
-        return false
-    }
-
     struct ThemeColor {
         static var text: NSColor {
-            let mode = UserDefaults.standard.string(forKey: "AppleInterfaceStyle")
-            return mode == "Dark" ? NSColor.white : NSColor.black
+            return NSColor.labelColor
         }
         static var highlightedText: NSColor {
             NSColor.white
