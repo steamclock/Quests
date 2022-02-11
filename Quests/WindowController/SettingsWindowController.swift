@@ -70,9 +70,12 @@ class SettingsWindowController: NSWindowController, NSWindowDelegate {
 
             let totalHeight = itemSize.height + largeHeaderSize.height + headerSize.height * CGFloat(repos.count - 1) + itemSize.height * CGFloat(repos.flatMap { $0.repos }.count)
             repoCollectionView?.snp.updateConstraints { make in make.height.equalTo(totalHeight) }
+
+            allRepoNames = repos.flatMap { owner in owner.repos.map { $0.name } }
         }
     }
     private var repoCollectionItems = [String: RepoCheckCollectionViewItem]()
+    private var allRepoNames = [String]()
 
     private let itemSize = CGSize(width: 220, height: 20)
     private let largeHeaderSize = CGSize(width: 220, height: 37)
@@ -407,10 +410,13 @@ extension SettingsWindowController: NSCollectionViewDataSource, NSCollectionView
 
 extension SettingsWindowController: RepoCheckCollectionViewItemDelegate {
     func repoCheckCollectionViewItem(_ repoCheckCollectionViewItem: RepoCheckCollectionViewItem, didToggleShowAll: Bool) {
-        for item in repoCollectionItems {
-            item.value.checkButton.state = didToggleShowAll ? .on : .off
-            item.value.buttonChecked(item.value.checkButton)
+        if didToggleShowAll {
+            Defaults[.ignoredRepos].removeAll()
+        } else {
+            Defaults[.ignoredRepos] = allRepoNames
         }
+
+        repoCollectionView?.reloadData()
     }
 }
 
