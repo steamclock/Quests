@@ -1,4 +1,6 @@
-## UNRELEASED
+## [1.3.0] - 4-4-22
+- Fixed as issue with the toggle button in the Settings repository list not considering all repos.
+- Fixed an issue with the menu label color not updating after switching system appearance. 
 - Only reload the batsignal message every hour instead of every time tickets are checked.
 
 ## [1.2.4] - 9-6-21
@@ -7,10 +9,8 @@
 ## [1.2.3] - 7-4-21
 - Add logo and thanks to the open source community to the about page.
 
-
 ## [1.2.2] - 18-1-21
 - Added a bunch of logging around ticket requests to try and track down increased CPU usage for some users.
-
 
 ## [1.2.1] - 5-1-21
 - Fixed an issue that was preventing Valet from storing or retrieving tokens.
