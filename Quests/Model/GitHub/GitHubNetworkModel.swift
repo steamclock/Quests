@@ -223,7 +223,7 @@ class GitHubNetworkModel: SourceNetworkModel {
                     let repo = Repository(name: issue.repository.name, source: .github, url: issue.repository.url, username: token.username, owner: issue.repository.owner.login)
 
                     let assigner = issue.timelineItems.nodes?.last??.fragments.assignedDetails?.actor?.login
-                    let assignee = issue.timelineItems.nodes?.last??.fragments.assignedDetails?.user?.login
+                    let assignee = issue.timelineItems.nodes?.last??.fragments.assignedDetails?.assignee?.login
                     let selfAssigned = assigner == assignee
 
                     let newTicket = Ticket(
@@ -249,7 +249,7 @@ class GitHubNetworkModel: SourceNetworkModel {
                     let repo = Repository(name: pr.repository.name, source: .github, url: pr.repository.url, username: token.username, owner: pr.repository.owner.login)
 
                     let assigner = pr.timelineItems.nodes?.last??.fragments.assignedDetails?.actor?.login
-                    let assignee = pr.timelineItems.nodes?.last??.fragments.assignedDetails?.user?.login
+                    let assignee = pr.timelineItems.nodes?.last??.fragments.assignedDetails?.assignee?.login
                     let selfAssigned = assigner == assignee
 
                     let newTicket = Ticket(

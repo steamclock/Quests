@@ -1321,9 +1321,11 @@ public struct AssignedDetails: GraphQLFragment {
         __typename
         login
       }
-      user {
+      assignee {
         __typename
-        login
+        ... on Actor {
+          login
+        }
       }
     }
     """
@@ -1333,7 +1335,7 @@ public struct AssignedDetails: GraphQLFragment {
   public static let selections: [GraphQLSelection] = [
     GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
     GraphQLField("actor", type: .object(Actor.selections)),
-    GraphQLField("user", type: .object(User.selections)),
+    GraphQLField("assignee", type: .object(Assignee.selections)),
   ]
 
   public private(set) var resultMap: ResultMap
@@ -1342,8 +1344,8 @@ public struct AssignedDetails: GraphQLFragment {
     self.resultMap = unsafeResultMap
   }
 
-  public init(actor: Actor? = nil, user: User? = nil) {
-    self.init(unsafeResultMap: ["__typename": "AssignedEvent", "actor": actor.flatMap { (value: Actor) -> ResultMap in value.resultMap }, "user": user.flatMap { (value: User) -> ResultMap in value.resultMap }])
+  public init(actor: Actor? = nil, assignee: Assignee? = nil) {
+    self.init(unsafeResultMap: ["__typename": "AssignedEvent", "actor": actor.flatMap { (value: Actor) -> ResultMap in value.resultMap }, "assignee": assignee.flatMap { (value: Assignee) -> ResultMap in value.resultMap }])
   }
 
   public var __typename: String {
@@ -1365,14 +1367,13 @@ public struct AssignedDetails: GraphQLFragment {
     }
   }
 
-  /// Identifies the user who was assigned.
-  @available(*, deprecated, message: "Assignees can now be mannequins. Use the `assignee` field instead. Removal on 2020-01-01 UTC.")
-  public var user: User? {
+  /// Identifies the user or mannequin that was assigned.
+  public var assignee: Assignee? {
     get {
-      return (resultMap["user"] as? ResultMap).flatMap { User(unsafeResultMap: $0) }
+      return (resultMap["assignee"] as? ResultMap).flatMap { Assignee(unsafeResultMap: $0) }
     }
     set {
-      resultMap.updateValue(newValue?.resultMap, forKey: "user")
+      resultMap.updateValue(newValue?.resultMap, forKey: "assignee")
     }
   }
 
@@ -1430,8 +1431,8 @@ public struct AssignedDetails: GraphQLFragment {
     }
   }
 
-  public struct User: GraphQLSelectionSet {
-    public static let possibleTypes: [String] = ["User"]
+  public struct Assignee: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Bot", "Mannequin", "Organization", "User"]
 
     public static let selections: [GraphQLSelection] = [
       GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
@@ -1444,8 +1445,20 @@ public struct AssignedDetails: GraphQLFragment {
       self.resultMap = unsafeResultMap
     }
 
-    public init(login: String) {
-      self.init(unsafeResultMap: ["__typename": "User", "login": login])
+    public static func makeBot(login: String) -> Assignee {
+      return Assignee(unsafeResultMap: ["__typename": "Bot", "login": login])
+    }
+
+    public static func makeMannequin(login: String) -> Assignee {
+      return Assignee(unsafeResultMap: ["__typename": "Mannequin", "login": login])
+    }
+
+    public static func makeOrganization(login: String) -> Assignee {
+      return Assignee(unsafeResultMap: ["__typename": "Organization", "login": login])
+    }
+
+    public static func makeUser(login: String) -> Assignee {
+      return Assignee(unsafeResultMap: ["__typename": "User", "login": login])
     }
 
     public var __typename: String {
@@ -1457,7 +1470,7 @@ public struct AssignedDetails: GraphQLFragment {
       }
     }
 
-    /// The username used to login.
+    /// The username of the actor.
     public var login: String {
       get {
         return resultMap["login"]! as! String
