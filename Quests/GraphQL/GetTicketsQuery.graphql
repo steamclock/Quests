@@ -39,7 +39,7 @@ fragment PRDetails on PullRequest {
     title
     updatedAt
     url
-    timeline(last: 1) {
+    timelineItems(last: 1) {
         nodes {
             ... AssignedDetails
         }
@@ -66,7 +66,7 @@ fragment IssueDetails on Issue {
     title
     updatedAt
     url
-    timeline(last: 1) {
+    timelineItems(last: 1) {
         nodes {
             ... AssignedDetails
         }
