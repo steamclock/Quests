@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = SwiftLint;
+			productName = SwiftLint;
 		};
 /* End PBXAggregateTarget section */
 
@@ -430,18 +431,18 @@
 		12C66BC029C36AC1D2A223503293A305 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		132F84B48C90959E8399EA4B7EEBF525 /* LogFormatterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogFormatterProtocol.swift; path = Sources/XCGLogger/LogFormatters/LogFormatterProtocol.swift; sourceTree = "<group>"; };
 		133AE864BC883B7257B70F90E32DFEB0 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		15925D1178399947FFA350B6D0A50E27 /* xml.c */ = {isa = PBXFileReference; includeInIndex = 1; name = xml.c; path = Source/cmark/xml.c; sourceTree = "<group>"; };
+		15925D1178399947FFA350B6D0A50E27 /* xml.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = xml.c; path = Source/cmark/xml.c; sourceTree = "<group>"; };
 		1816C379B3AA025CF1CA8AA3CD9475FF /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
 		186E40461E2FE48E915192953ACCEAB4 /* XCGLogger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XCGLogger-umbrella.h"; sourceTree = "<group>"; };
-		19505C3754CA22D260C9A9C806CE469F /* CwlUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CwlUtils.framework; path = CwlUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19505C3754CA22D260C9A9C806CE469F /* CwlUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CwlUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A1C32FD6CB008180190548810584C4C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		1A4DEDA557FECEA0ACFEC26265878877 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
 		1A86CC926C8ED616B391E9B47816A666 /* DownCommonMarkRenderable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DownCommonMarkRenderable.swift; path = Source/Renderers/DownCommonMarkRenderable.swift; sourceTree = "<group>"; };
-		1A9247A47297D44D4E93FEA5875F5F3B /* blocks.c */ = {isa = PBXFileReference; includeInIndex = 1; name = blocks.c; path = Source/cmark/blocks.c; sourceTree = "<group>"; };
+		1A9247A47297D44D4E93FEA5875F5F3B /* blocks.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = blocks.c; path = Source/cmark/blocks.c; sourceTree = "<group>"; };
 		1AC58E3834D5DF74927CF05C9E637666 /* CwlFrameAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlFrameAddress.h; path = Sources/CwlFrameAddress/include/CwlFrameAddress.h; sourceTree = "<group>"; };
 		1AC82D0F9C6F570239096376ADCC338D /* CodeBlockOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodeBlockOptions.swift; path = Source/AST/Styling/Options/CodeBlockOptions.swift; sourceTree = "<group>"; };
-		1BE20A7603B980909541FA6C3E0954FC /* commonmark.c */ = {isa = PBXFileReference; includeInIndex = 1; name = commonmark.c; path = Source/cmark/commonmark.c; sourceTree = "<group>"; };
-		1CAB16A12A28E8BE749202B03552307A /* ObjcExceptionBridging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ObjcExceptionBridging.framework; path = ObjcExceptionBridging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BE20A7603B980909541FA6C3E0954FC /* commonmark.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = commonmark.c; path = Source/cmark/commonmark.c; sourceTree = "<group>"; };
+		1CAB16A12A28E8BE749202B03552307A /* ObjcExceptionBridging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjcExceptionBridging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7E958ED335F2F2638913E5275F3256 /* SoftBreak.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoftBreak.swift; path = Source/AST/Nodes/SoftBreak.swift; sourceTree = "<group>"; };
 		1F8407C1AB84E2E13048380916BA1573 /* Netable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Netable.modulemap; sourceTree = "<group>"; };
 		1FB2F2B8E1C67EBC6C505D06EF0DEB3C /* XCGLogger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XCGLogger-prefix.pch"; sourceTree = "<group>"; };
@@ -452,7 +453,7 @@
 		2172B5336BB539626104D9C01841FE60 /* ThematicBreakAttribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThematicBreakAttribute.swift; path = "Source/AST/Styling/Custom Attributes/ThematicBreakAttribute.swift"; sourceTree = "<group>"; };
 		2177DBCF4E795DA115B7682C5DD3C445 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		21964FBCF19F00B1F591F246EAE17B96 /* DownAttributedStringRenderable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DownAttributedStringRenderable.swift; path = Source/Renderers/DownAttributedStringRenderable.swift; sourceTree = "<group>"; };
-		21B03CA622E690725A6626C088E1D09F /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Reachability.framework; path = ReachabilitySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21B03CA622E690725A6626C088E1D09F /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21C1192ECF7251808FCE7A8582897537 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
 		2218986D56C85CB3DE114397B4C8F37B /* Node.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Node.swift; path = Source/AST/Nodes/Node.swift; sourceTree = "<group>"; };
 		233666306FB8740B0C3067022C9C5662 /* Down-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Down-dummy.m"; sourceTree = "<group>"; };
@@ -483,7 +484,7 @@
 		3625C1E94EA43B13572A085AAADF1E99 /* DestinationProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DestinationProtocol.swift; path = Sources/XCGLogger/Destinations/DestinationProtocol.swift; sourceTree = "<group>"; };
 		374B221DA2F85351E855CC12F36E72C8 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
 		374CC110DF352B6327E0708D1B9ED78C /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
-		3A3BF02D02AB334493280CFB9E22542F /* houdini_html_u.c */ = {isa = PBXFileReference; includeInIndex = 1; name = houdini_html_u.c; path = Source/cmark/houdini_html_u.c; sourceTree = "<group>"; };
+		3A3BF02D02AB334493280CFB9E22542F /* houdini_html_u.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = houdini_html_u.c; path = Source/cmark/houdini_html_u.c; sourceTree = "<group>"; };
 		3A67066413838BD06E05CD86613D3054 /* URLRequest+EncodeURL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+EncodeURL.swift"; path = "Netable/Netable/URLRequest+EncodeURL.swift"; sourceTree = "<group>"; };
 		3BA6262A9DBD6E322E48062FA76DCEE4 /* XCGLogger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XCGLogger-dummy.m"; sourceTree = "<group>"; };
 		3BEBDA16C6B8F76D430091054300FA5E /* Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.debug.xcconfig; sourceTree = "<group>"; };
@@ -491,7 +492,7 @@
 		3CF6D33536A7E041A81625573DA0DED4 /* URLRequest+EncodeParameters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+EncodeParameters.swift"; path = "Netable/Netable/URLRequest+EncodeParameters.swift"; sourceTree = "<group>"; };
 		3D3E46F970D04898E9718B3A7AED0FAF /* Base64LogFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base64LogFormatter.swift; path = Sources/XCGLogger/LogFormatters/Base64LogFormatter.swift; sourceTree = "<group>"; };
 		3DADBD42B644CF60DC4806C82994987D /* cmark_version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark_version.h; path = Source/cmark/cmark_version.h; sourceTree = "<group>"; };
-		3FEA5F6CCF86397E36BA19DF0C3E8AC5 /* Netable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Netable.framework; path = Netable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FEA5F6CCF86397E36BA19DF0C3E8AC5 /* Netable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Netable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E80E6B38647701DCED0F13ACD0CADF /* Valet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Valet.swift; path = Sources/Valet/Valet.swift; sourceTree = "<group>"; };
 		41F7B92275566009F9A7A5C65373BC5E /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
 		4252D96EFAFD762609665B730A0B5EF3 /* XCGLogger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XCGLogger.modulemap; sourceTree = "<group>"; };
@@ -509,11 +510,11 @@
 		4A88148FE1D7DC7EC2C0B4275A89B9E3 /* ObjcExceptionBridging.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ObjcExceptionBridging.modulemap; sourceTree = "<group>"; };
 		4B59AC46CE7D01E5E28733DDE5AC4385 /* Document.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Document.swift; path = Source/AST/Nodes/Document.swift; sourceTree = "<group>"; };
 		4B9806F9D9219F8DB4DFF8BD73C5037A /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Source/AST/Nodes/Image.swift; sourceTree = "<group>"; };
-		4C90E8F3F21B7688E1FB09920322D768 /* Down.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Down.framework; path = Down.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C90E8F3F21B7688E1FB09920322D768 /* Down.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Down.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D4F824C874FC0A4482BFD3A14D473B3 /* CloudAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CloudAccessibility.swift; path = Sources/Valet/CloudAccessibility.swift; sourceTree = "<group>"; };
 		4DD43F5A6F9F4AA4E198BA454F4B9FE1 /* Pods-Quests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Quests-Info.plist"; sourceTree = "<group>"; };
 		4F3E4C8CB68C05C761DBEB855142F24E /* CGRect+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGRect+Helpers.swift"; path = "Source/AST/Styling/Helpers/Extensions/CGRect+Helpers.swift"; sourceTree = "<group>"; };
-		504E0843DC8892A271BF34186360679E /* CwlFrameAddress.c */ = {isa = PBXFileReference; includeInIndex = 1; name = CwlFrameAddress.c; path = Sources/CwlFrameAddress/CwlFrameAddress.c; sourceTree = "<group>"; };
+		504E0843DC8892A271BF34186360679E /* CwlFrameAddress.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = CwlFrameAddress.c; path = Sources/CwlFrameAddress/CwlFrameAddress.c; sourceTree = "<group>"; };
 		52540E2B96A66127E702E30DEA1554E9 /* CwlWrappers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlWrappers.swift; path = Sources/CwlUtils/CwlWrappers.swift; sourceTree = "<group>"; };
 		52DB3CB5FA25A6ECC0AE2E02220FFD8C /* DefaultsBridges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultsBridges.swift; path = Sources/DefaultsBridges.swift; sourceTree = "<group>"; };
 		52E6D41B0506678C3718E22F65ACE80C /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
@@ -525,13 +526,13 @@
 		56FA7C2FE71176D04D7DF20A65803B68 /* CwlUtils.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CwlUtils.modulemap; sourceTree = "<group>"; };
 		571FC3B0277F04AF40239568EFC057D9 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
 		575C61A285FBA9A5816AAD9EED5545A9 /* parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parser.h; path = Source/cmark/parser.h; sourceTree = "<group>"; };
-		57EF65AB927CD026BE9E26C3B7678190 /* houdini_html_e.c */ = {isa = PBXFileReference; includeInIndex = 1; name = houdini_html_e.c; path = Source/cmark/houdini_html_e.c; sourceTree = "<group>"; };
+		57EF65AB927CD026BE9E26C3B7678190 /* houdini_html_e.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = houdini_html_e.c; path = Source/cmark/houdini_html_e.c; sourceTree = "<group>"; };
 		582BCBAE32F6249D74F24C46F3301D33 /* CwlStackFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlStackFrame.swift; path = Sources/CwlUtils/CwlStackFrame.swift; sourceTree = "<group>"; };
 		58660C1056956A1103CEC42BDE6002A7 /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
-		598454F1CD1BB2F24E721099120F5F69 /* iterator.c */ = {isa = PBXFileReference; includeInIndex = 1; name = iterator.c; path = Source/cmark/iterator.c; sourceTree = "<group>"; };
+		598454F1CD1BB2F24E721099120F5F69 /* iterator.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = iterator.c; path = Source/cmark/iterator.c; sourceTree = "<group>"; };
 		5BC4A4FF6B59ED4DC80B82CB0C234E75 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
 		5BD51F0B55ECCD878F746238F6F1E420 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EFE400347E43DDF7C0E7D41ED3619B8 /* Defaults+StringToBool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Defaults+StringToBool.swift"; path = "Sources/Defaults+StringToBool.swift"; sourceTree = "<group>"; };
 		600815CEA5267574FB028E4077BB9420 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		6026AC2EF06658724EBB4F6DF8AE00FC /* RequestIdentifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestIdentifier.swift; path = Netable/Netable/RequestIdentifier.swift; sourceTree = "<group>"; };
@@ -544,7 +545,7 @@
 		654BA7CE925A4B04EEE52FF78910109E /* DownStyler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DownStyler.swift; path = Source/AST/Styling/Stylers/DownStyler.swift; sourceTree = "<group>"; };
 		657095BDC3709F78C26D91E9D611FC3C /* ANSIColorLogFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ANSIColorLogFormatter.swift; path = Sources/XCGLogger/LogFormatters/ANSIColorLogFormatter.swift; sourceTree = "<group>"; };
 		65D0131FECF28DA92D67B547AEB8702D /* SwiftyUserDefaults-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyUserDefaults-prefix.pch"; sourceTree = "<group>"; };
-		65D2A0D819B7AB225B07FD3B4399F46B /* .swift-version */ = {isa = PBXFileReference; includeInIndex = 1; path = ".swift-version"; sourceTree = "<group>"; };
+		65D2A0D819B7AB225B07FD3B4399F46B /* .swift-version */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		66C8E8A33F8CB49E6170F410444D3779 /* Defaults+Subscripts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Defaults+Subscripts.swift"; path = "Sources/Defaults+Subscripts.swift"; sourceTree = "<group>"; };
 		66F7C71DF4E03941E1D313B6C99D1E95 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
 		67147485D634A6108537FC74E1175258 /* CGPoint+Translate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGPoint+Translate.swift"; path = "Source/AST/Styling/Helpers/Extensions/CGPoint+Translate.swift"; sourceTree = "<group>"; };
@@ -553,24 +554,24 @@
 		6C97D22B880620C9355D5A75303A45E4 /* SwiftyUserDefaults-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyUserDefaults-Info.plist"; sourceTree = "<group>"; };
 		6FB304F6EF01011E0D9CC367540DB0DD /* BaseNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseNode.swift; path = Source/AST/Nodes/BaseNode.swift; sourceTree = "<group>"; };
 		6FBEA927D8BB8FD71C656732BFFBCF82 /* utf8.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = utf8.h; path = Source/cmark/utf8.h; sourceTree = "<group>"; };
-		6FD690BFF43FC7A22F3FE9718ACC731A /* node.c */ = {isa = PBXFileReference; includeInIndex = 1; name = node.c; path = Source/cmark/node.c; sourceTree = "<group>"; };
-		7009F72EA49BB6886B1A448A514FED38 /* references.c */ = {isa = PBXFileReference; includeInIndex = 1; name = references.c; path = Source/cmark/references.c; sourceTree = "<group>"; };
+		6FD690BFF43FC7A22F3FE9718ACC731A /* node.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = node.c; path = Source/cmark/node.c; sourceTree = "<group>"; };
+		7009F72EA49BB6886B1A448A514FED38 /* references.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = references.c; path = Source/cmark/references.c; sourceTree = "<group>"; };
 		70C8CCE17C228EDE38212144FDA68672 /* DelayedOperations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelayedOperations.swift; path = Netable/Netable/DelayedOperations.swift; sourceTree = "<group>"; };
 		7162BD4638407733290E4195E52B1CB0 /* ObjcExceptionBridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjcExceptionBridging.h; path = Sources/ObjcExceptionBridging/include/ObjcExceptionBridging.h; sourceTree = "<group>"; };
 		73A807A3F2F3BE739662AC6372AF85E3 /* AutoRotatingFileDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoRotatingFileDestination.swift; path = Sources/XCGLogger/Destinations/AutoRotatingFileDestination.swift; sourceTree = "<group>"; };
 		73B20CD3EC638B3E5C37C776E94375EE /* CwlSerializingContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlSerializingContext.swift; path = Sources/CwlUtils/CwlSerializingContext.swift; sourceTree = "<group>"; };
-		73B24FD1EFB89FECBE6BB9559409A07D /* houdini_href_e.c */ = {isa = PBXFileReference; includeInIndex = 1; name = houdini_href_e.c; path = Source/cmark/houdini_href_e.c; sourceTree = "<group>"; };
+		73B24FD1EFB89FECBE6BB9559409A07D /* houdini_href_e.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = houdini_href_e.c; path = Source/cmark/houdini_href_e.c; sourceTree = "<group>"; };
 		759866940DB08E719C29234364E4CF6D /* RetryConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryConfiguration.swift; path = Netable/Netable/RetryConfiguration.swift; sourceTree = "<group>"; };
-		76480365DE31961A4E5E2F19B30C3B83 /* render.c */ = {isa = PBXFileReference; includeInIndex = 1; name = render.c; path = Source/cmark/render.c; sourceTree = "<group>"; };
+		76480365DE31961A4E5E2F19B30C3B83 /* render.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = render.c; path = Source/cmark/render.c; sourceTree = "<group>"; };
 		77EA823E366709D6F72C2C00C89671B6 /* CwlUtils-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CwlUtils-umbrella.h"; sourceTree = "<group>"; };
 		785833AD4A54C2BAAA470C1EF052743C /* URLRequest+Multipart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Multipart.swift"; path = "Netable/Netable/URLRequest+Multipart.swift"; sourceTree = "<group>"; };
 		79937B31EBA742AB8A2A4271ABB83B4A /* Pods-Quests.releaseinternal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Quests.releaseinternal.xcconfig"; sourceTree = "<group>"; };
 		79BD059EB91906D9ECC927581D5B8D95 /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsetTarget.swift; path = Source/ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
 		7C0D4FBC1215943B521831EB1ADFA076 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
-		7C49518C9662BD7FF49B56634CFDEC6F /* latex.c */ = {isa = PBXFileReference; includeInIndex = 1; name = latex.c; path = Source/cmark/latex.c; sourceTree = "<group>"; };
+		7C49518C9662BD7FF49B56634CFDEC6F /* latex.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = latex.c; path = Source/cmark/latex.c; sourceTree = "<group>"; };
 		7CC3D803BAF2B9EC9B31227268930E4C /* ParagraphStyleCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParagraphStyleCollection.swift; path = "Source/AST/Styling/Attribute Collections/ParagraphStyleCollection.swift"; sourceTree = "<group>"; };
 		7CC5AA098C5B8E2690592B5AAC8C8860 /* cmark_ctype.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark_ctype.h; path = Source/cmark/cmark_ctype.h; sourceTree = "<group>"; };
-		7D535DC2DDCF312C3AE940CA980518AF /* man.c */ = {isa = PBXFileReference; includeInIndex = 1; name = man.c; path = Source/cmark/man.c; sourceTree = "<group>"; };
+		7D535DC2DDCF312C3AE940CA980518AF /* man.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = man.c; path = Source/cmark/man.c; sourceTree = "<group>"; };
 		8039C515478BDF83C488F6890E3AAA43 /* node.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = node.h; path = Source/cmark/node.h; sourceTree = "<group>"; };
 		81757FB6843CCF3E2E8620E059D96795 /* ReachabilitySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ReachabilitySwift.debug.xcconfig; sourceTree = "<group>"; };
 		8219D76EF85A7E294A866D2C296FB02A /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
@@ -588,9 +589,9 @@
 		887599C323AED7F80DE24CE15D25DE87 /* CwlUtils-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CwlUtils-dummy.m"; sourceTree = "<group>"; };
 		889A498116FE76E35F226E44F9B9178E /* Valet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Valet.debug.xcconfig; sourceTree = "<group>"; };
 		88A6652ADB1FCECCCEC4185CB1B48271 /* Netable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Netable.swift; path = Netable/Netable/Netable.swift; sourceTree = "<group>"; };
-		8997BC92BBEFC740F15DEE27867E2F72 /* buffer.c */ = {isa = PBXFileReference; includeInIndex = 1; name = buffer.c; path = Source/cmark/buffer.c; sourceTree = "<group>"; };
+		8997BC92BBEFC740F15DEE27867E2F72 /* buffer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = buffer.c; path = Source/cmark/buffer.c; sourceTree = "<group>"; };
 		8A1C453AC2DC5DDF5275222D42CCC55B /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		8A32D5F3A0DE08F28E56A5DD3FA2364D /* Pods_Quests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Quests.framework; path = "Pods-Quests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A32D5F3A0DE08F28E56A5DD3FA2364D /* Pods_Quests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3AB6BAFA6730C7021A51AC4C55C958 /* SwiftyUserDefaults.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyUserDefaults.debug.xcconfig; sourceTree = "<group>"; };
 		8B550E9D20F01101C17B0682FA50162E /* SwiftyUserDefaults.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyUserDefaults.release.xcconfig; sourceTree = "<group>"; };
 		8CA669666062DAE8749FD8C50FD543BC /* TestDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TestDestination.swift; path = Sources/XCGLogger/Destinations/TestDestination.swift; sourceTree = "<group>"; };
@@ -606,16 +607,16 @@
 		9222E289FA0973A7B68852726F37B546 /* String+ToHTML.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+ToHTML.swift"; path = "Source/Extensions/String+ToHTML.swift"; sourceTree = "<group>"; };
 		960FD13CACC3D1A0444CCE330FBC609F /* DownGroffRenderable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DownGroffRenderable.swift; path = Source/Renderers/DownGroffRenderable.swift; sourceTree = "<group>"; };
 		9776E29E896DFB6D1107BF6A2C8330BA /* CwlLifetime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlLifetime.swift; path = Sources/CwlUtils/CwlLifetime.swift; sourceTree = "<group>"; };
-		979486118B3E90C08386079D57962701 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		990B82C56E795F245324493A40368941 /* inlines.c */ = {isa = PBXFileReference; includeInIndex = 1; name = inlines.c; path = Source/cmark/inlines.c; sourceTree = "<group>"; };
+		979486118B3E90C08386079D57962701 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		990B82C56E795F245324493A40368941 /* inlines.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = inlines.c; path = Source/cmark/inlines.c; sourceTree = "<group>"; };
 		996388655B515B211FD7E6C1CC5D5648 /* Pods-Quests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Quests.modulemap"; sourceTree = "<group>"; };
 		9B5C174A31193D29CF7A6C9EE32EC1B3 /* ReachabilitySwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ReachabilitySwift.modulemap; sourceTree = "<group>"; };
 		9C01129E1A49211507FBD3147141CC4C /* XCGLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XCGLogger.release.xcconfig; sourceTree = "<group>"; };
 		9C3BBFE7510841838DD77B8B6BC67C14 /* ColorCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorCollection.swift; path = "Source/AST/Styling/Attribute Collections/ColorCollection.swift"; sourceTree = "<group>"; };
 		9C8E7D75513A8C2700A630D50090F8C1 /* Pods-Quests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Quests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DD7442645DB8444B769DF9E0FBC8D1D /* DownRenderable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DownRenderable.swift; path = Source/Renderers/DownRenderable.swift; sourceTree = "<group>"; };
-		9FEB3AB3846318BD7E9ED53A8606C046 /* html.c */ = {isa = PBXFileReference; includeInIndex = 1; name = html.c; path = Source/cmark/html.c; sourceTree = "<group>"; };
+		9FEB3AB3846318BD7E9ED53A8606C046 /* html.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = html.c; path = Source/cmark/html.c; sourceTree = "<group>"; };
 		A0BFCF7534C452C415E20577EB6470CE /* CwlCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlCollection.swift; path = Sources/CwlUtils/CwlCollection.swift; sourceTree = "<group>"; };
 		A124759FC36633C4BCFF442DDC0DD139 /* CwlCaseNameCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlCaseNameCodable.swift; path = Sources/CwlUtils/CwlCaseNameCodable.swift; sourceTree = "<group>"; };
 		A15656353C0E201B5FB291A23D065F4C /* MigratableKeyValuePair.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MigratableKeyValuePair.swift; path = Sources/Valet/MigratableKeyValuePair.swift; sourceTree = "<group>"; };
@@ -643,12 +644,12 @@
 		AF407EE74FCFE7869CCAD42CCD281A24 /* ObjcExceptionBridging-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjcExceptionBridging-umbrella.h"; sourceTree = "<group>"; };
 		B05956D500DC15F479E7AD001AEA35E0 /* CwlResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlResult.swift; path = Sources/CwlUtils/CwlResult.swift; sourceTree = "<group>"; };
 		B0D45EACEDD6D5FB2481F21F240A457C /* BlockQuote.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockQuote.swift; path = Source/AST/Nodes/BlockQuote.swift; sourceTree = "<group>"; };
-		B2DF875D9CF32F80CF666130FE1FDBA8 /* cmark_ctype.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cmark_ctype.c; path = Source/cmark/cmark_ctype.c; sourceTree = "<group>"; };
-		B3081E0CFC54E0C89C7B6D481B03DC95 /* Valet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Valet.framework; path = Valet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2DF875D9CF32F80CF666130FE1FDBA8 /* cmark_ctype.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = cmark_ctype.c; path = Source/cmark/cmark_ctype.c; sourceTree = "<group>"; };
+		B3081E0CFC54E0C89C7B6D481B03DC95 /* Valet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Valet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B518AE1825D02ACA9D6530164CF32E /* Netable-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Netable-Info.plist"; sourceTree = "<group>"; };
 		B6A57513319E8E7DD6A9E0D75DB562B4 /* ObjectiveCMarker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ObjectiveCMarker.m; path = Sources/ObjcExceptionBridging/ObjectiveCMarker.m; sourceTree = "<group>"; };
 		B6ECEAE4591739FBAD3AFCCDCECF9842 /* ConsoleDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConsoleDestination.swift; path = Sources/XCGLogger/Destinations/ConsoleDestination.swift; sourceTree = "<group>"; };
-		B7715718A7E1E513F9BC2E99B977FCA9 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyUserDefaults.framework; path = SwiftyUserDefaults.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7715718A7E1E513F9BC2E99B977FCA9 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyUserDefaults.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8DE1E9E14A3E68C3EBB674D51E4473B /* DefaultsSerializable+BuiltIns.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DefaultsSerializable+BuiltIns.swift"; path = "Sources/DefaultsSerializable+BuiltIns.swift"; sourceTree = "<group>"; };
 		B9DD087477CBEEC587B0EF1E147E6BE8 /* LogDestination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogDestination.swift; path = Netable/Netable/LogDestination.swift; sourceTree = "<group>"; };
 		BBE51BAC15FAD226B70F0F31A12CF61D /* scanners.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = scanners.h; path = Source/cmark/scanners.h; sourceTree = "<group>"; };
@@ -680,7 +681,7 @@
 		D05B44706629BB6A3B0BE0CA85992C95 /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
 		D0CEB81076DC90B0261723F9E433F275 /* Down.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Down.modulemap; sourceTree = "<group>"; };
 		D1801CD9F4FE34A863FD85DD4FED4321 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		D36D43CCD8C284C922AFEABB279DEB65 /* cmark.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cmark.c; path = Source/cmark/cmark.c; sourceTree = "<group>"; };
+		D36D43CCD8C284C922AFEABB279DEB65 /* cmark.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = cmark.c; path = Source/cmark/cmark.c; sourceTree = "<group>"; };
 		D45C95C452A56172E43CD25DDF02FF7B /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
 		D4A25156F540013A1E3CD86AD609BC18 /* SnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.release.xcconfig; sourceTree = "<group>"; };
 		D56C1BDA14B990E5E4C41D406B14FD5D /* Pods-Quests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Quests-frameworks.sh"; sourceTree = "<group>"; };
@@ -706,9 +707,9 @@
 		DE151E44E5FF561B11C59C29D20952D3 /* chunk.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = chunk.h; path = Source/cmark/chunk.h; sourceTree = "<group>"; };
 		DF00C1A26BA37A98339609B1E37CDD45 /* Valet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Valet.modulemap; sourceTree = "<group>"; };
 		DF1EA3DD4404D51B63139E296AA90408 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
-		E191E6E6A456F554C947F3BDEE5FDE8A /* scanners.c */ = {isa = PBXFileReference; includeInIndex = 1; name = scanners.c; path = Source/cmark/scanners.c; sourceTree = "<group>"; };
+		E191E6E6A456F554C947F3BDEE5FDE8A /* scanners.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = scanners.c; path = Source/cmark/scanners.c; sourceTree = "<group>"; };
 		E22263AF958C665F1EE236576C4C232F /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
-		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E23D18647DE004A1D2CEE1310E6AB441 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		E28A84239AADBBEF9ADCCE85B030FFAE /* Pods-Quests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Quests.release.xcconfig"; sourceTree = "<group>"; };
 		E3E4DC044AF61276F1406624156814F9 /* CwlMutex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlMutex.swift; path = Sources/CwlUtils/CwlMutex.swift; sourceTree = "<group>"; };
@@ -738,7 +739,7 @@
 		F091DE4EF25082DBB27B785DE016979E /* ThematicBreak.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThematicBreak.swift; path = Source/AST/Nodes/ThematicBreak.swift; sourceTree = "<group>"; };
 		F0B5D38B19C16842E1235C9E0217A000 /* Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Accessibility.swift; path = Sources/Valet/Accessibility.swift; sourceTree = "<group>"; };
 		F18349D54D2C16B5455A6E0CB34A6B80 /* Valet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Valet.h; path = Sources/Valet/Valet.h; sourceTree = "<group>"; };
-		F1B81A594455334D161994299EE56FA3 /* utf8.c */ = {isa = PBXFileReference; includeInIndex = 1; name = utf8.c; path = Source/cmark/utf8.c; sourceTree = "<group>"; };
+		F1B81A594455334D161994299EE56FA3 /* utf8.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = utf8.c; path = Source/cmark/utf8.c; sourceTree = "<group>"; };
 		F32506B5FDF53E6BFEA0A76C0FDB119A /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		F503C85E0E7004CE5429680B4BC74D4A /* ObjcExceptionBridging-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ObjcExceptionBridging-dummy.m"; sourceTree = "<group>"; };
 		F5524297D7B687C35F48CC61A34C82C2 /* CwlDeferredWork.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlDeferredWork.swift; path = Sources/CwlUtils/CwlDeferredWork.swift; sourceTree = "<group>"; };
@@ -749,7 +750,7 @@
 		F825C62B1E64CE1004FEB9B29271CB66 /* Down-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Down-umbrella.h"; sourceTree = "<group>"; };
 		F987FD2EDE99C88208ACA7C0AAEFBFEC /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		FBE102B34566CF9B07DBCAF8A317C8E3 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		FC21E11599264BC8297EB97354A9423F /* XCGLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XCGLogger.framework; path = XCGLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC21E11599264BC8297EB97354A9423F /* XCGLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCGLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB29C1071C75A54D994234731B55817 /* ListItemOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ListItemOptions.swift; path = Source/AST/Styling/Options/ListItemOptions.swift; sourceTree = "<group>"; };
 		FDC69D8EC61218A7FD0E608849C2E419 /* cmark.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark.h; path = Source/cmark/cmark.h; sourceTree = "<group>"; };
 		FEB68179B64754FED5C63E03D9F647D6 /* DownDebugLayoutManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DownDebugLayoutManager.swift; path = "Source/AST/Styling/Layout Managers/DownDebugLayoutManager.swift"; sourceTree = "<group>"; };
@@ -876,7 +877,6 @@
 				F78C8BBD4232A4F11C629502B760955C /* OptionalType.swift */,
 				10F972839B99091A85FF970BC45C8356 /* Support Files */,
 			);
-			name = SwiftyUserDefaults;
 			path = SwiftyUserDefaults;
 			sourceTree = "<group>";
 		};
@@ -920,7 +920,6 @@
 				52540E2B96A66127E702E30DEA1554E9 /* CwlWrappers.swift */,
 				D2C7333F561FD6198A6D01776FE53DEB /* Support Files */,
 			);
-			name = CwlUtils;
 			path = CwlUtils;
 			sourceTree = "<group>";
 		};
@@ -980,7 +979,6 @@
 				0CA1F79E3A68062478B415F562068291 /* UILayoutSupport+Extensions.swift */,
 				D39B3BFBC2DE842AE6CD365752A0D947 /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -1001,7 +999,6 @@
 				785833AD4A54C2BAAA470C1EF052743C /* URLRequest+Multipart.swift */,
 				C87729EF71E574DB2B57445C47D048A4 /* Support Files */,
 			);
-			name = Netable;
 			path = Netable;
 			sourceTree = "<group>";
 		};
@@ -1011,7 +1008,6 @@
 				AAD608246B69F940724E408CB1F97F32 /* SwiftyJSON.swift */,
 				E611507E831687E8A978699E2F7890B2 /* Support Files */,
 			);
-			name = SwiftyJSON;
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
@@ -1037,7 +1033,6 @@
 				40E80E6B38647701DCED0F13ACD0CADF /* Valet.swift */,
 				DD730568826D2222AA0D2F831C6CE181 /* Support Files */,
 			);
-			name = Valet;
 			path = Valet;
 			sourceTree = "<group>";
 		};
@@ -1096,7 +1091,6 @@
 				FBE102B34566CF9B07DBCAF8A317C8E3 /* Validation.swift */,
 				A8202B10742EB4EA678CCB8099C872D0 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1225,7 +1219,6 @@
 				D83C13595189133975450CA8C26603AF /* Resources */,
 				73DEF7375630F4762BC93A954CC02BE6 /* Support Files */,
 			);
-			name = Down;
 			path = Down;
 			sourceTree = "<group>";
 		};
@@ -1235,7 +1228,6 @@
 				08EA6BCB56C6C3F80F31EDD39837B199 /* ObjcExceptionBridging */,
 				31DEF4B64A2CDCEF35A9F70924820BD8 /* Support Files */,
 			);
-			name = ObjcExceptionBridging;
 			path = ObjcExceptionBridging;
 			sourceTree = "<group>";
 		};
@@ -1278,7 +1270,6 @@
 			children = (
 				35191563DAF08DD51DA6CB0913C93BD0 /* Support Files */,
 			);
-			name = SwiftLint;
 			path = SwiftLint;
 			sourceTree = "<group>";
 		};
@@ -1288,7 +1279,6 @@
 				D65963AD7D72E4A7788BDD54EFA81EE8 /* Reachability.swift */,
 				842544EAF557E1260A46AD1BCE6E6146 /* Support Files */,
 			);
-			name = ReachabilitySwift;
 			path = ReachabilitySwift;
 			sourceTree = "<group>";
 		};
@@ -1321,7 +1311,6 @@
 				BC94AF0234332A190EB63BFF752F5096 /* Core */,
 				DD5953F2C74B9961E0A1C2730445AE1A /* Support Files */,
 			);
-			name = XCGLogger;
 			path = XCGLogger;
 			sourceTree = "<group>";
 		};
@@ -2428,7 +2417,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/XCGLogger/XCGLogger.modulemap";
 				PRODUCT_MODULE_NAME = XCGLogger;
 				PRODUCT_NAME = XCGLogger;
@@ -2465,7 +2454,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/CwlUtils/CwlUtils.modulemap";
 				PRODUCT_MODULE_NAME = CwlUtils;
 				PRODUCT_NAME = CwlUtils;
@@ -2502,7 +2491,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
 				PRODUCT_MODULE_NAME = SwiftyJSON;
 				PRODUCT_NAME = SwiftyJSON;
@@ -2540,7 +2529,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/CwlUtils/CwlUtils.modulemap";
 				PRODUCT_MODULE_NAME = CwlUtils;
 				PRODUCT_NAME = CwlUtils;
@@ -2656,7 +2645,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
@@ -2694,7 +2683,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
 				PRODUCT_MODULE_NAME = SnapKit;
 				PRODUCT_NAME = SnapKit;
@@ -2732,7 +2721,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
 				PRODUCT_MODULE_NAME = SnapKit;
 				PRODUCT_NAME = SnapKit;
@@ -2770,7 +2759,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
 				PRODUCT_MODULE_NAME = SnapKit;
 				PRODUCT_NAME = SnapKit;
@@ -2808,7 +2797,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/Down/Down.modulemap";
 				PRODUCT_MODULE_NAME = Down;
 				PRODUCT_NAME = Down;
@@ -2845,7 +2834,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
 				PRODUCT_MODULE_NAME = SwiftyJSON;
 				PRODUCT_NAME = SwiftyJSON;
@@ -2883,7 +2872,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
@@ -2977,7 +2966,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
@@ -3015,7 +3004,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/Down/Down.modulemap";
 				PRODUCT_MODULE_NAME = Down;
 				PRODUCT_NAME = Down;
@@ -3091,7 +3080,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
 				PRODUCT_MODULE_NAME = SnapKit;
 				PRODUCT_NAME = SnapKit;
@@ -3129,7 +3118,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/CwlUtils/CwlUtils.modulemap";
 				PRODUCT_MODULE_NAME = CwlUtils;
 				PRODUCT_NAME = CwlUtils;
@@ -3291,7 +3280,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/SwiftyUserDefaults/SwiftyUserDefaults.modulemap";
 				PRODUCT_MODULE_NAME = SwiftyUserDefaults;
 				PRODUCT_NAME = SwiftyUserDefaults;
@@ -3329,7 +3318,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/CwlUtils/CwlUtils.modulemap";
 				PRODUCT_MODULE_NAME = CwlUtils;
 				PRODUCT_NAME = CwlUtils;
@@ -3367,7 +3356,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/XCGLogger/XCGLogger.modulemap";
 				PRODUCT_MODULE_NAME = XCGLogger;
 				PRODUCT_NAME = XCGLogger;
@@ -3444,7 +3433,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift.modulemap";
 				PRODUCT_MODULE_NAME = Reachability;
 				PRODUCT_NAME = Reachability;
@@ -3482,7 +3471,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/Valet/Valet.modulemap";
 				PRODUCT_MODULE_NAME = Valet;
 				PRODUCT_NAME = Valet;
@@ -3520,7 +3509,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
@@ -3636,7 +3625,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/ObjcExceptionBridging/ObjcExceptionBridging.modulemap";
 				PRODUCT_MODULE_NAME = ObjcExceptionBridging;
 				PRODUCT_NAME = ObjcExceptionBridging;
@@ -3674,7 +3663,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/XCGLogger/XCGLogger.modulemap";
 				PRODUCT_MODULE_NAME = XCGLogger;
 				PRODUCT_NAME = XCGLogger;
@@ -3747,7 +3736,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift.modulemap";
 				PRODUCT_MODULE_NAME = Reachability;
 				PRODUCT_NAME = Reachability;
@@ -3825,7 +3814,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/Down/Down.modulemap";
 				PRODUCT_MODULE_NAME = Down;
 				PRODUCT_NAME = Down;
@@ -3863,7 +3852,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/XCGLogger/XCGLogger.modulemap";
 				PRODUCT_MODULE_NAME = XCGLogger;
 				PRODUCT_NAME = XCGLogger;
@@ -3899,7 +3888,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
 				PRODUCT_MODULE_NAME = SwiftyJSON;
 				PRODUCT_NAME = SwiftyJSON;
@@ -3937,7 +3926,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/Valet/Valet.modulemap";
 				PRODUCT_MODULE_NAME = Valet;
 				PRODUCT_NAME = Valet;
@@ -3975,7 +3964,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/Valet/Valet.modulemap";
 				PRODUCT_MODULE_NAME = Valet;
 				PRODUCT_NAME = Valet;
@@ -4013,7 +4002,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/ObjcExceptionBridging/ObjcExceptionBridging.modulemap";
 				PRODUCT_MODULE_NAME = ObjcExceptionBridging;
 				PRODUCT_NAME = ObjcExceptionBridging;
@@ -4051,7 +4040,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/Valet/Valet.modulemap";
 				PRODUCT_MODULE_NAME = Valet;
 				PRODUCT_NAME = Valet;
@@ -4129,7 +4118,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift.modulemap";
 				PRODUCT_MODULE_NAME = Reachability;
 				PRODUCT_NAME = Reachability;
@@ -4166,7 +4155,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
 				PRODUCT_MODULE_NAME = SwiftyJSON;
 				PRODUCT_NAME = SwiftyJSON;
@@ -4268,7 +4257,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/SwiftyUserDefaults/SwiftyUserDefaults.modulemap";
 				PRODUCT_MODULE_NAME = SwiftyUserDefaults;
 				PRODUCT_NAME = SwiftyUserDefaults;
@@ -4306,7 +4295,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/SwiftyUserDefaults/SwiftyUserDefaults.modulemap";
 				PRODUCT_MODULE_NAME = SwiftyUserDefaults;
 				PRODUCT_NAME = SwiftyUserDefaults;
@@ -4382,7 +4371,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/ObjcExceptionBridging/ObjcExceptionBridging.modulemap";
 				PRODUCT_MODULE_NAME = ObjcExceptionBridging;
 				PRODUCT_NAME = ObjcExceptionBridging;
@@ -4420,7 +4409,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift.modulemap";
 				PRODUCT_MODULE_NAME = Reachability;
 				PRODUCT_NAME = Reachability;
@@ -4458,7 +4447,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/Down/Down.modulemap";
 				PRODUCT_MODULE_NAME = Down;
 				PRODUCT_NAME = Down;
@@ -4496,7 +4485,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/SwiftyUserDefaults/SwiftyUserDefaults.modulemap";
 				PRODUCT_MODULE_NAME = SwiftyUserDefaults;
 				PRODUCT_NAME = SwiftyUserDefaults;
@@ -4534,7 +4523,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULEMAP_FILE = "Target Support Files/ObjcExceptionBridging/ObjcExceptionBridging.modulemap";
 				PRODUCT_MODULE_NAME = ObjcExceptionBridging;
 				PRODUCT_NAME = ObjcExceptionBridging;

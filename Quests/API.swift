@@ -150,7 +150,7 @@ public final class GetTicketsQuery: GraphQLQuery {
       self.init(unsafeResultMap: ["__typename": "Query", "search": search.resultMap])
     }
 
-    /// Perform a search across resources.
+    /// Perform a search across resources, returning a maximum of 1,000 results.
     public var search: Search {
       get {
         return Search(unsafeResultMap: resultMap["search"]! as! ResultMap)
@@ -189,7 +189,8 @@ public final class GetTicketsQuery: GraphQLQuery {
         }
       }
 
-      /// The number of issues that matched the search query.
+      /// The total number of issues that matched the search query. Regardless of the
+      /// total number of matches, a maximum of 1,000 results will be available across all types.
       public var issueCount: Int {
         get {
           return resultMap["issueCount"]! as! Int
@@ -306,7 +307,7 @@ public final class GetTicketsQuery: GraphQLQuery {
         }
 
         public struct Node: GraphQLSelectionSet {
-          public static let possibleTypes: [String] = ["Issue", "PullRequest", "Repository", "User", "Organization", "MarketplaceListing"]
+          public static let possibleTypes: [String] = ["App", "Discussion", "Issue", "MarketplaceListing", "Organization", "PullRequest", "Repository", "User"]
 
           public static let selections: [GraphQLSelection] = [
             GraphQLTypeCase(
@@ -323,20 +324,28 @@ public final class GetTicketsQuery: GraphQLQuery {
             self.resultMap = unsafeResultMap
           }
 
-          public static func makeRepository() -> Node {
-            return Node(unsafeResultMap: ["__typename": "Repository"])
+          public static func makeApp() -> Node {
+            return Node(unsafeResultMap: ["__typename": "App"])
           }
 
-          public static func makeUser() -> Node {
-            return Node(unsafeResultMap: ["__typename": "User"])
+          public static func makeDiscussion() -> Node {
+            return Node(unsafeResultMap: ["__typename": "Discussion"])
+          }
+
+          public static func makeMarketplaceListing() -> Node {
+            return Node(unsafeResultMap: ["__typename": "MarketplaceListing"])
           }
 
           public static func makeOrganization() -> Node {
             return Node(unsafeResultMap: ["__typename": "Organization"])
           }
 
-          public static func makeMarketplaceListing() -> Node {
-            return Node(unsafeResultMap: ["__typename": "MarketplaceListing"])
+          public static func makeRepository() -> Node {
+            return Node(unsafeResultMap: ["__typename": "Repository"])
+          }
+
+          public static func makeUser() -> Node {
+            return Node(unsafeResultMap: ["__typename": "User"])
           }
 
           public var __typename: String {
@@ -909,7 +918,7 @@ public final class TestGetTicketsQuery: GraphQLQuery {
       self.init(unsafeResultMap: ["__typename": "Query", "search": search.resultMap])
     }
 
-    /// Perform a search across resources.
+    /// Perform a search across resources, returning a maximum of 1,000 results.
     public var search: Search {
       get {
         return Search(unsafeResultMap: resultMap["search"]! as! ResultMap)
@@ -948,7 +957,8 @@ public final class TestGetTicketsQuery: GraphQLQuery {
         }
       }
 
-      /// The number of issues that matched the search query.
+      /// The total number of issues that matched the search query. Regardless of the
+      /// total number of matches, a maximum of 1,000 results will be available across all types.
       public var issueCount: Int {
         get {
           return resultMap["issueCount"]! as! Int
@@ -1065,7 +1075,7 @@ public final class TestGetTicketsQuery: GraphQLQuery {
         }
 
         public struct Node: GraphQLSelectionSet {
-          public static let possibleTypes: [String] = ["Issue", "PullRequest", "Repository", "User", "Organization", "MarketplaceListing"]
+          public static let possibleTypes: [String] = ["App", "Discussion", "Issue", "MarketplaceListing", "Organization", "PullRequest", "Repository", "User"]
 
           public static let selections: [GraphQLSelection] = [
             GraphQLTypeCase(
@@ -1082,20 +1092,28 @@ public final class TestGetTicketsQuery: GraphQLQuery {
             self.resultMap = unsafeResultMap
           }
 
-          public static func makeRepository() -> Node {
-            return Node(unsafeResultMap: ["__typename": "Repository"])
+          public static func makeApp() -> Node {
+            return Node(unsafeResultMap: ["__typename": "App"])
           }
 
-          public static func makeUser() -> Node {
-            return Node(unsafeResultMap: ["__typename": "User"])
+          public static func makeDiscussion() -> Node {
+            return Node(unsafeResultMap: ["__typename": "Discussion"])
+          }
+
+          public static func makeMarketplaceListing() -> Node {
+            return Node(unsafeResultMap: ["__typename": "MarketplaceListing"])
           }
 
           public static func makeOrganization() -> Node {
             return Node(unsafeResultMap: ["__typename": "Organization"])
           }
 
-          public static func makeMarketplaceListing() -> Node {
-            return Node(unsafeResultMap: ["__typename": "MarketplaceListing"])
+          public static func makeRepository() -> Node {
+            return Node(unsafeResultMap: ["__typename": "Repository"])
+          }
+
+          public static func makeUser() -> Node {
+            return Node(unsafeResultMap: ["__typename": "User"])
           }
 
           public var __typename: String {
@@ -1303,9 +1321,11 @@ public struct AssignedDetails: GraphQLFragment {
         __typename
         login
       }
-      user {
+      assignee {
         __typename
-        login
+        ... on Actor {
+          login
+        }
       }
     }
     """
@@ -1315,7 +1335,7 @@ public struct AssignedDetails: GraphQLFragment {
   public static let selections: [GraphQLSelection] = [
     GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
     GraphQLField("actor", type: .object(Actor.selections)),
-    GraphQLField("user", type: .object(User.selections)),
+    GraphQLField("assignee", type: .object(Assignee.selections)),
   ]
 
   public private(set) var resultMap: ResultMap
@@ -1324,8 +1344,8 @@ public struct AssignedDetails: GraphQLFragment {
     self.resultMap = unsafeResultMap
   }
 
-  public init(actor: Actor? = nil, user: User? = nil) {
-    self.init(unsafeResultMap: ["__typename": "AssignedEvent", "actor": actor.flatMap { (value: Actor) -> ResultMap in value.resultMap }, "user": user.flatMap { (value: User) -> ResultMap in value.resultMap }])
+  public init(actor: Actor? = nil, assignee: Assignee? = nil) {
+    self.init(unsafeResultMap: ["__typename": "AssignedEvent", "actor": actor.flatMap { (value: Actor) -> ResultMap in value.resultMap }, "assignee": assignee.flatMap { (value: Assignee) -> ResultMap in value.resultMap }])
   }
 
   public var __typename: String {
@@ -1347,18 +1367,18 @@ public struct AssignedDetails: GraphQLFragment {
     }
   }
 
-  /// Identifies the user who was assigned.
-  public var user: User? {
+  /// Identifies the user or mannequin that was assigned.
+  public var assignee: Assignee? {
     get {
-      return (resultMap["user"] as? ResultMap).flatMap { User(unsafeResultMap: $0) }
+      return (resultMap["assignee"] as? ResultMap).flatMap { Assignee(unsafeResultMap: $0) }
     }
     set {
-      resultMap.updateValue(newValue?.resultMap, forKey: "user")
+      resultMap.updateValue(newValue?.resultMap, forKey: "assignee")
     }
   }
 
   public struct Actor: GraphQLSelectionSet {
-    public static let possibleTypes: [String] = ["Organization", "User", "Bot"]
+    public static let possibleTypes: [String] = ["EnterpriseUserAccount", "Organization", "User", "Bot", "Mannequin"]
 
     public static let selections: [GraphQLSelection] = [
       GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
@@ -1371,6 +1391,10 @@ public struct AssignedDetails: GraphQLFragment {
       self.resultMap = unsafeResultMap
     }
 
+    public static func makeEnterpriseUserAccount(login: String) -> Actor {
+      return Actor(unsafeResultMap: ["__typename": "EnterpriseUserAccount", "login": login])
+    }
+
     public static func makeOrganization(login: String) -> Actor {
       return Actor(unsafeResultMap: ["__typename": "Organization", "login": login])
     }
@@ -1381,6 +1405,10 @@ public struct AssignedDetails: GraphQLFragment {
 
     public static func makeBot(login: String) -> Actor {
       return Actor(unsafeResultMap: ["__typename": "Bot", "login": login])
+    }
+
+    public static func makeMannequin(login: String) -> Actor {
+      return Actor(unsafeResultMap: ["__typename": "Mannequin", "login": login])
     }
 
     public var __typename: String {
@@ -1403,8 +1431,8 @@ public struct AssignedDetails: GraphQLFragment {
     }
   }
 
-  public struct User: GraphQLSelectionSet {
-    public static let possibleTypes: [String] = ["User"]
+  public struct Assignee: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Bot", "Mannequin", "Organization", "User"]
 
     public static let selections: [GraphQLSelection] = [
       GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
@@ -1417,8 +1445,20 @@ public struct AssignedDetails: GraphQLFragment {
       self.resultMap = unsafeResultMap
     }
 
-    public init(login: String) {
-      self.init(unsafeResultMap: ["__typename": "User", "login": login])
+    public static func makeBot(login: String) -> Assignee {
+      return Assignee(unsafeResultMap: ["__typename": "Bot", "login": login])
+    }
+
+    public static func makeMannequin(login: String) -> Assignee {
+      return Assignee(unsafeResultMap: ["__typename": "Mannequin", "login": login])
+    }
+
+    public static func makeOrganization(login: String) -> Assignee {
+      return Assignee(unsafeResultMap: ["__typename": "Organization", "login": login])
+    }
+
+    public static func makeUser(login: String) -> Assignee {
+      return Assignee(unsafeResultMap: ["__typename": "User", "login": login])
     }
 
     public var __typename: String {
@@ -1430,7 +1470,7 @@ public struct AssignedDetails: GraphQLFragment {
       }
     }
 
-    /// The username used to login.
+    /// The username of the actor.
     public var login: String {
       get {
         return resultMap["login"]! as! String
@@ -1455,7 +1495,7 @@ public struct PrDetails: GraphQLFragment {
       title
       updatedAt
       url
-      timeline(last: 1) {
+      timelineItems(last: 1) {
         __typename
         nodes {
           __typename
@@ -1493,7 +1533,7 @@ public struct PrDetails: GraphQLFragment {
     GraphQLField("title", type: .nonNull(.scalar(String.self))),
     GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
     GraphQLField("url", type: .nonNull(.scalar(String.self))),
-    GraphQLField("timeline", arguments: ["last": 1], type: .nonNull(.object(Timeline.selections))),
+    GraphQLField("timelineItems", arguments: ["last": 1], type: .nonNull(.object(TimelineItem.selections))),
     GraphQLField("labels", arguments: ["first": 10], type: .object(Label.selections)),
     GraphQLField("repository", type: .nonNull(.object(Repository.selections))),
   ]
@@ -1504,8 +1544,8 @@ public struct PrDetails: GraphQLFragment {
     self.resultMap = unsafeResultMap
   }
 
-  public init(author: Author? = nil, title: String, updatedAt: String, url: String, timeline: Timeline, labels: Label? = nil, repository: Repository) {
-    self.init(unsafeResultMap: ["__typename": "PullRequest", "author": author.flatMap { (value: Author) -> ResultMap in value.resultMap }, "title": title, "updatedAt": updatedAt, "url": url, "timeline": timeline.resultMap, "labels": labels.flatMap { (value: Label) -> ResultMap in value.resultMap }, "repository": repository.resultMap])
+  public init(author: Author? = nil, title: String, updatedAt: String, url: String, timelineItems: TimelineItem, labels: Label? = nil, repository: Repository) {
+    self.init(unsafeResultMap: ["__typename": "PullRequest", "author": author.flatMap { (value: Author) -> ResultMap in value.resultMap }, "title": title, "updatedAt": updatedAt, "url": url, "timelineItems": timelineItems.resultMap, "labels": labels.flatMap { (value: Label) -> ResultMap in value.resultMap }, "repository": repository.resultMap])
   }
 
   public var __typename: String {
@@ -1558,12 +1598,12 @@ public struct PrDetails: GraphQLFragment {
   }
 
   /// A list of events, comments, commits, etc. associated with the pull request.
-  public var timeline: Timeline {
+  public var timelineItems: TimelineItem {
     get {
-      return Timeline(unsafeResultMap: resultMap["timeline"]! as! ResultMap)
+      return TimelineItem(unsafeResultMap: resultMap["timelineItems"]! as! ResultMap)
     }
     set {
-      resultMap.updateValue(newValue.resultMap, forKey: "timeline")
+      resultMap.updateValue(newValue.resultMap, forKey: "timelineItems")
     }
   }
 
@@ -1588,7 +1628,7 @@ public struct PrDetails: GraphQLFragment {
   }
 
   public struct Author: GraphQLSelectionSet {
-    public static let possibleTypes: [String] = ["Organization", "User", "Bot"]
+    public static let possibleTypes: [String] = ["EnterpriseUserAccount", "Organization", "User", "Bot", "Mannequin"]
 
     public static let selections: [GraphQLSelection] = [
       GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
@@ -1601,6 +1641,10 @@ public struct PrDetails: GraphQLFragment {
       self.resultMap = unsafeResultMap
     }
 
+    public static func makeEnterpriseUserAccount(login: String) -> Author {
+      return Author(unsafeResultMap: ["__typename": "EnterpriseUserAccount", "login": login])
+    }
+
     public static func makeOrganization(login: String) -> Author {
       return Author(unsafeResultMap: ["__typename": "Organization", "login": login])
     }
@@ -1611,6 +1655,10 @@ public struct PrDetails: GraphQLFragment {
 
     public static func makeBot(login: String) -> Author {
       return Author(unsafeResultMap: ["__typename": "Bot", "login": login])
+    }
+
+    public static func makeMannequin(login: String) -> Author {
+      return Author(unsafeResultMap: ["__typename": "Mannequin", "login": login])
     }
 
     public var __typename: String {
@@ -1633,8 +1681,8 @@ public struct PrDetails: GraphQLFragment {
     }
   }
 
-  public struct Timeline: GraphQLSelectionSet {
-    public static let possibleTypes: [String] = ["PullRequestTimelineConnection"]
+  public struct TimelineItem: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["PullRequestTimelineItemsConnection"]
 
     public static let selections: [GraphQLSelection] = [
       GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
@@ -1648,7 +1696,7 @@ public struct PrDetails: GraphQLFragment {
     }
 
     public init(nodes: [Node?]? = nil) {
-      self.init(unsafeResultMap: ["__typename": "PullRequestTimelineConnection", "nodes": nodes.flatMap { (value: [Node?]) -> [ResultMap?] in value.map { (value: Node?) -> ResultMap? in value.flatMap { (value: Node) -> ResultMap in value.resultMap } } }])
+      self.init(unsafeResultMap: ["__typename": "PullRequestTimelineItemsConnection", "nodes": nodes.flatMap { (value: [Node?]) -> [ResultMap?] in value.map { (value: Node?) -> ResultMap? in value.flatMap { (value: Node) -> ResultMap in value.resultMap } } }])
     }
 
     public var __typename: String {
@@ -1671,7 +1719,7 @@ public struct PrDetails: GraphQLFragment {
     }
 
     public struct Node: GraphQLSelectionSet {
-      public static let possibleTypes: [String] = ["Commit", "CommitCommentThread", "PullRequestReview", "PullRequestReviewThread", "PullRequestReviewComment", "IssueComment", "ClosedEvent", "ReopenedEvent", "SubscribedEvent", "UnsubscribedEvent", "MergedEvent", "ReferencedEvent", "CrossReferencedEvent", "AssignedEvent", "UnassignedEvent", "LabeledEvent", "UnlabeledEvent", "MilestonedEvent", "DemilestonedEvent", "RenamedTitleEvent", "LockedEvent", "UnlockedEvent", "DeployedEvent", "HeadRefDeletedEvent", "HeadRefRestoredEvent", "HeadRefForcePushedEvent", "BaseRefForcePushedEvent", "ReviewRequestedEvent", "ReviewRequestRemovedEvent", "ReviewDismissedEvent"]
+      public static let possibleTypes: [String] = ["AddedToMergeQueueEvent", "AddedToProjectEvent", "AssignedEvent", "AutoMergeDisabledEvent", "AutoMergeEnabledEvent", "AutoRebaseEnabledEvent", "AutoSquashEnabledEvent", "AutomaticBaseChangeFailedEvent", "AutomaticBaseChangeSucceededEvent", "BaseRefChangedEvent", "BaseRefDeletedEvent", "BaseRefForcePushedEvent", "ClosedEvent", "CommentDeletedEvent", "ConnectedEvent", "ConvertToDraftEvent", "ConvertedNoteToIssueEvent", "ConvertedToDiscussionEvent", "CrossReferencedEvent", "DemilestonedEvent", "DeployedEvent", "DeploymentEnvironmentChangedEvent", "DisconnectedEvent", "HeadRefDeletedEvent", "HeadRefForcePushedEvent", "HeadRefRestoredEvent", "IssueComment", "LabeledEvent", "LockedEvent", "MarkedAsDuplicateEvent", "MentionedEvent", "MergedEvent", "MilestonedEvent", "MovedColumnsInProjectEvent", "ParentIssueAddedEvent", "ParentIssueRemovedEvent", "PinnedEvent", "PullRequestCommit", "PullRequestCommitCommentThread", "PullRequestReview", "PullRequestReviewThread", "PullRequestRevisionMarker", "ReadyForReviewEvent", "ReferencedEvent", "RemovedFromMergeQueueEvent", "RemovedFromProjectEvent", "RenamedTitleEvent", "ReopenedEvent", "ReviewDismissedEvent", "ReviewRequestRemovedEvent", "ReviewRequestedEvent", "SubIssueAddedEvent", "SubIssueRemovedEvent", "SubscribedEvent", "TransferredEvent", "UnassignedEvent", "UnlabeledEvent", "UnlockedEvent", "UnmarkedAsDuplicateEvent", "UnpinnedEvent", "UnsubscribedEvent", "UserBlockedEvent"]
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
@@ -1684,12 +1732,156 @@ public struct PrDetails: GraphQLFragment {
         self.resultMap = unsafeResultMap
       }
 
-      public static func makeCommit() -> Node {
-        return Node(unsafeResultMap: ["__typename": "Commit"])
+      public static func makeAddedToMergeQueueEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "AddedToMergeQueueEvent"])
       }
 
-      public static func makeCommitCommentThread() -> Node {
-        return Node(unsafeResultMap: ["__typename": "CommitCommentThread"])
+      public static func makeAddedToProjectEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "AddedToProjectEvent"])
+      }
+
+      public static func makeAutoMergeDisabledEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "AutoMergeDisabledEvent"])
+      }
+
+      public static func makeAutoMergeEnabledEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "AutoMergeEnabledEvent"])
+      }
+
+      public static func makeAutoRebaseEnabledEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "AutoRebaseEnabledEvent"])
+      }
+
+      public static func makeAutoSquashEnabledEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "AutoSquashEnabledEvent"])
+      }
+
+      public static func makeAutomaticBaseChangeFailedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "AutomaticBaseChangeFailedEvent"])
+      }
+
+      public static func makeAutomaticBaseChangeSucceededEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "AutomaticBaseChangeSucceededEvent"])
+      }
+
+      public static func makeBaseRefChangedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "BaseRefChangedEvent"])
+      }
+
+      public static func makeBaseRefDeletedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "BaseRefDeletedEvent"])
+      }
+
+      public static func makeBaseRefForcePushedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "BaseRefForcePushedEvent"])
+      }
+
+      public static func makeClosedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ClosedEvent"])
+      }
+
+      public static func makeCommentDeletedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "CommentDeletedEvent"])
+      }
+
+      public static func makeConnectedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ConnectedEvent"])
+      }
+
+      public static func makeConvertToDraftEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ConvertToDraftEvent"])
+      }
+
+      public static func makeConvertedNoteToIssueEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ConvertedNoteToIssueEvent"])
+      }
+
+      public static func makeConvertedToDiscussionEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ConvertedToDiscussionEvent"])
+      }
+
+      public static func makeCrossReferencedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "CrossReferencedEvent"])
+      }
+
+      public static func makeDemilestonedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "DemilestonedEvent"])
+      }
+
+      public static func makeDeployedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "DeployedEvent"])
+      }
+
+      public static func makeDeploymentEnvironmentChangedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "DeploymentEnvironmentChangedEvent"])
+      }
+
+      public static func makeDisconnectedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "DisconnectedEvent"])
+      }
+
+      public static func makeHeadRefDeletedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "HeadRefDeletedEvent"])
+      }
+
+      public static func makeHeadRefForcePushedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "HeadRefForcePushedEvent"])
+      }
+
+      public static func makeHeadRefRestoredEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "HeadRefRestoredEvent"])
+      }
+
+      public static func makeIssueComment() -> Node {
+        return Node(unsafeResultMap: ["__typename": "IssueComment"])
+      }
+
+      public static func makeLabeledEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "LabeledEvent"])
+      }
+
+      public static func makeLockedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "LockedEvent"])
+      }
+
+      public static func makeMarkedAsDuplicateEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "MarkedAsDuplicateEvent"])
+      }
+
+      public static func makeMentionedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "MentionedEvent"])
+      }
+
+      public static func makeMergedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "MergedEvent"])
+      }
+
+      public static func makeMilestonedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "MilestonedEvent"])
+      }
+
+      public static func makeMovedColumnsInProjectEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "MovedColumnsInProjectEvent"])
+      }
+
+      public static func makeParentIssueAddedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ParentIssueAddedEvent"])
+      }
+
+      public static func makeParentIssueRemovedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ParentIssueRemovedEvent"])
+      }
+
+      public static func makePinnedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "PinnedEvent"])
+      }
+
+      public static func makePullRequestCommit() -> Node {
+        return Node(unsafeResultMap: ["__typename": "PullRequestCommit"])
+      }
+
+      public static func makePullRequestCommitCommentThread() -> Node {
+        return Node(unsafeResultMap: ["__typename": "PullRequestCommitCommentThread"])
       }
 
       public static func makePullRequestReview() -> Node {
@@ -1700,104 +1892,88 @@ public struct PrDetails: GraphQLFragment {
         return Node(unsafeResultMap: ["__typename": "PullRequestReviewThread"])
       }
 
-      public static func makePullRequestReviewComment() -> Node {
-        return Node(unsafeResultMap: ["__typename": "PullRequestReviewComment"])
+      public static func makePullRequestRevisionMarker() -> Node {
+        return Node(unsafeResultMap: ["__typename": "PullRequestRevisionMarker"])
       }
 
-      public static func makeIssueComment() -> Node {
-        return Node(unsafeResultMap: ["__typename": "IssueComment"])
-      }
-
-      public static func makeClosedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "ClosedEvent"])
-      }
-
-      public static func makeReopenedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "ReopenedEvent"])
-      }
-
-      public static func makeSubscribedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "SubscribedEvent"])
-      }
-
-      public static func makeUnsubscribedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "UnsubscribedEvent"])
-      }
-
-      public static func makeMergedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "MergedEvent"])
+      public static func makeReadyForReviewEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ReadyForReviewEvent"])
       }
 
       public static func makeReferencedEvent() -> Node {
         return Node(unsafeResultMap: ["__typename": "ReferencedEvent"])
       }
 
-      public static func makeCrossReferencedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "CrossReferencedEvent"])
+      public static func makeRemovedFromMergeQueueEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "RemovedFromMergeQueueEvent"])
       }
 
-      public static func makeUnassignedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "UnassignedEvent"])
-      }
-
-      public static func makeLabeledEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "LabeledEvent"])
-      }
-
-      public static func makeUnlabeledEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "UnlabeledEvent"])
-      }
-
-      public static func makeMilestonedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "MilestonedEvent"])
-      }
-
-      public static func makeDemilestonedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "DemilestonedEvent"])
+      public static func makeRemovedFromProjectEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "RemovedFromProjectEvent"])
       }
 
       public static func makeRenamedTitleEvent() -> Node {
         return Node(unsafeResultMap: ["__typename": "RenamedTitleEvent"])
       }
 
-      public static func makeLockedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "LockedEvent"])
+      public static func makeReopenedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ReopenedEvent"])
       }
 
-      public static func makeUnlockedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "UnlockedEvent"])
-      }
-
-      public static func makeDeployedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "DeployedEvent"])
-      }
-
-      public static func makeHeadRefDeletedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "HeadRefDeletedEvent"])
-      }
-
-      public static func makeHeadRefRestoredEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "HeadRefRestoredEvent"])
-      }
-
-      public static func makeHeadRefForcePushedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "HeadRefForcePushedEvent"])
-      }
-
-      public static func makeBaseRefForcePushedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "BaseRefForcePushedEvent"])
-      }
-
-      public static func makeReviewRequestedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "ReviewRequestedEvent"])
+      public static func makeReviewDismissedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ReviewDismissedEvent"])
       }
 
       public static func makeReviewRequestRemovedEvent() -> Node {
         return Node(unsafeResultMap: ["__typename": "ReviewRequestRemovedEvent"])
       }
 
-      public static func makeReviewDismissedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "ReviewDismissedEvent"])
+      public static func makeReviewRequestedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ReviewRequestedEvent"])
+      }
+
+      public static func makeSubIssueAddedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "SubIssueAddedEvent"])
+      }
+
+      public static func makeSubIssueRemovedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "SubIssueRemovedEvent"])
+      }
+
+      public static func makeSubscribedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "SubscribedEvent"])
+      }
+
+      public static func makeTransferredEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "TransferredEvent"])
+      }
+
+      public static func makeUnassignedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "UnassignedEvent"])
+      }
+
+      public static func makeUnlabeledEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "UnlabeledEvent"])
+      }
+
+      public static func makeUnlockedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "UnlockedEvent"])
+      }
+
+      public static func makeUnmarkedAsDuplicateEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "UnmarkedAsDuplicateEvent"])
+      }
+
+      public static func makeUnpinnedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "UnpinnedEvent"])
+      }
+
+      public static func makeUnsubscribedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "UnsubscribedEvent"])
+      }
+
+      public static func makeUserBlockedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "UserBlockedEvent"])
       }
 
       public var __typename: String {
@@ -2092,7 +2268,7 @@ public struct IssueDetails: GraphQLFragment {
       title
       updatedAt
       url
-      timeline(last: 1) {
+      timelineItems(last: 1) {
         __typename
         nodes {
           __typename
@@ -2129,7 +2305,7 @@ public struct IssueDetails: GraphQLFragment {
     GraphQLField("title", type: .nonNull(.scalar(String.self))),
     GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
     GraphQLField("url", type: .nonNull(.scalar(String.self))),
-    GraphQLField("timeline", arguments: ["last": 1], type: .nonNull(.object(Timeline.selections))),
+    GraphQLField("timelineItems", arguments: ["last": 1], type: .nonNull(.object(TimelineItem.selections))),
     GraphQLField("labels", arguments: ["first": 10], type: .object(Label.selections)),
     GraphQLField("repository", type: .nonNull(.object(Repository.selections))),
   ]
@@ -2140,8 +2316,8 @@ public struct IssueDetails: GraphQLFragment {
     self.resultMap = unsafeResultMap
   }
 
-  public init(title: String, updatedAt: String, url: String, timeline: Timeline, labels: Label? = nil, repository: Repository) {
-    self.init(unsafeResultMap: ["__typename": "Issue", "title": title, "updatedAt": updatedAt, "url": url, "timeline": timeline.resultMap, "labels": labels.flatMap { (value: Label) -> ResultMap in value.resultMap }, "repository": repository.resultMap])
+  public init(title: String, updatedAt: String, url: String, timelineItems: TimelineItem, labels: Label? = nil, repository: Repository) {
+    self.init(unsafeResultMap: ["__typename": "Issue", "title": title, "updatedAt": updatedAt, "url": url, "timelineItems": timelineItems.resultMap, "labels": labels.flatMap { (value: Label) -> ResultMap in value.resultMap }, "repository": repository.resultMap])
   }
 
   public var __typename: String {
@@ -2184,12 +2360,12 @@ public struct IssueDetails: GraphQLFragment {
   }
 
   /// A list of events, comments, commits, etc. associated with the issue.
-  public var timeline: Timeline {
+  public var timelineItems: TimelineItem {
     get {
-      return Timeline(unsafeResultMap: resultMap["timeline"]! as! ResultMap)
+      return TimelineItem(unsafeResultMap: resultMap["timelineItems"]! as! ResultMap)
     }
     set {
-      resultMap.updateValue(newValue.resultMap, forKey: "timeline")
+      resultMap.updateValue(newValue.resultMap, forKey: "timelineItems")
     }
   }
 
@@ -2213,8 +2389,8 @@ public struct IssueDetails: GraphQLFragment {
     }
   }
 
-  public struct Timeline: GraphQLSelectionSet {
-    public static let possibleTypes: [String] = ["IssueTimelineConnection"]
+  public struct TimelineItem: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["IssueTimelineItemsConnection"]
 
     public static let selections: [GraphQLSelection] = [
       GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
@@ -2228,7 +2404,7 @@ public struct IssueDetails: GraphQLFragment {
     }
 
     public init(nodes: [Node?]? = nil) {
-      self.init(unsafeResultMap: ["__typename": "IssueTimelineConnection", "nodes": nodes.flatMap { (value: [Node?]) -> [ResultMap?] in value.map { (value: Node?) -> ResultMap? in value.flatMap { (value: Node) -> ResultMap in value.resultMap } } }])
+      self.init(unsafeResultMap: ["__typename": "IssueTimelineItemsConnection", "nodes": nodes.flatMap { (value: [Node?]) -> [ResultMap?] in value.map { (value: Node?) -> ResultMap? in value.flatMap { (value: Node) -> ResultMap in value.resultMap } } }])
     }
 
     public var __typename: String {
@@ -2251,7 +2427,7 @@ public struct IssueDetails: GraphQLFragment {
     }
 
     public struct Node: GraphQLSelectionSet {
-      public static let possibleTypes: [String] = ["Commit", "IssueComment", "CrossReferencedEvent", "ClosedEvent", "ReopenedEvent", "SubscribedEvent", "UnsubscribedEvent", "ReferencedEvent", "AssignedEvent", "UnassignedEvent", "LabeledEvent", "UnlabeledEvent", "MilestonedEvent", "DemilestonedEvent", "RenamedTitleEvent", "LockedEvent", "UnlockedEvent"]
+      public static let possibleTypes: [String] = ["AddedToProjectEvent", "AssignedEvent", "ClosedEvent", "CommentDeletedEvent", "ConnectedEvent", "ConvertedNoteToIssueEvent", "ConvertedToDiscussionEvent", "CrossReferencedEvent", "DemilestonedEvent", "DisconnectedEvent", "IssueComment", "LabeledEvent", "LockedEvent", "MarkedAsDuplicateEvent", "MentionedEvent", "MilestonedEvent", "MovedColumnsInProjectEvent", "ParentIssueAddedEvent", "ParentIssueRemovedEvent", "PinnedEvent", "ReferencedEvent", "RemovedFromProjectEvent", "RenamedTitleEvent", "ReopenedEvent", "SubIssueAddedEvent", "SubIssueRemovedEvent", "SubscribedEvent", "TransferredEvent", "UnassignedEvent", "UnlabeledEvent", "UnlockedEvent", "UnmarkedAsDuplicateEvent", "UnpinnedEvent", "UnsubscribedEvent", "UserBlockedEvent"]
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
@@ -2264,68 +2440,140 @@ public struct IssueDetails: GraphQLFragment {
         self.resultMap = unsafeResultMap
       }
 
-      public static func makeCommit() -> Node {
-        return Node(unsafeResultMap: ["__typename": "Commit"])
-      }
-
-      public static func makeIssueComment() -> Node {
-        return Node(unsafeResultMap: ["__typename": "IssueComment"])
-      }
-
-      public static func makeCrossReferencedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "CrossReferencedEvent"])
+      public static func makeAddedToProjectEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "AddedToProjectEvent"])
       }
 
       public static func makeClosedEvent() -> Node {
         return Node(unsafeResultMap: ["__typename": "ClosedEvent"])
       }
 
-      public static func makeReopenedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "ReopenedEvent"])
+      public static func makeCommentDeletedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "CommentDeletedEvent"])
       }
 
-      public static func makeSubscribedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "SubscribedEvent"])
+      public static func makeConnectedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ConnectedEvent"])
       }
 
-      public static func makeUnsubscribedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "UnsubscribedEvent"])
+      public static func makeConvertedNoteToIssueEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ConvertedNoteToIssueEvent"])
       }
 
-      public static func makeReferencedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "ReferencedEvent"])
+      public static func makeConvertedToDiscussionEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ConvertedToDiscussionEvent"])
       }
 
-      public static func makeUnassignedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "UnassignedEvent"])
-      }
-
-      public static func makeLabeledEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "LabeledEvent"])
-      }
-
-      public static func makeUnlabeledEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "UnlabeledEvent"])
-      }
-
-      public static func makeMilestonedEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "MilestonedEvent"])
+      public static func makeCrossReferencedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "CrossReferencedEvent"])
       }
 
       public static func makeDemilestonedEvent() -> Node {
         return Node(unsafeResultMap: ["__typename": "DemilestonedEvent"])
       }
 
-      public static func makeRenamedTitleEvent() -> Node {
-        return Node(unsafeResultMap: ["__typename": "RenamedTitleEvent"])
+      public static func makeDisconnectedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "DisconnectedEvent"])
+      }
+
+      public static func makeIssueComment() -> Node {
+        return Node(unsafeResultMap: ["__typename": "IssueComment"])
+      }
+
+      public static func makeLabeledEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "LabeledEvent"])
       }
 
       public static func makeLockedEvent() -> Node {
         return Node(unsafeResultMap: ["__typename": "LockedEvent"])
       }
 
+      public static func makeMarkedAsDuplicateEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "MarkedAsDuplicateEvent"])
+      }
+
+      public static func makeMentionedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "MentionedEvent"])
+      }
+
+      public static func makeMilestonedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "MilestonedEvent"])
+      }
+
+      public static func makeMovedColumnsInProjectEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "MovedColumnsInProjectEvent"])
+      }
+
+      public static func makeParentIssueAddedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ParentIssueAddedEvent"])
+      }
+
+      public static func makeParentIssueRemovedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ParentIssueRemovedEvent"])
+      }
+
+      public static func makePinnedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "PinnedEvent"])
+      }
+
+      public static func makeReferencedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ReferencedEvent"])
+      }
+
+      public static func makeRemovedFromProjectEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "RemovedFromProjectEvent"])
+      }
+
+      public static func makeRenamedTitleEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "RenamedTitleEvent"])
+      }
+
+      public static func makeReopenedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "ReopenedEvent"])
+      }
+
+      public static func makeSubIssueAddedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "SubIssueAddedEvent"])
+      }
+
+      public static func makeSubIssueRemovedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "SubIssueRemovedEvent"])
+      }
+
+      public static func makeSubscribedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "SubscribedEvent"])
+      }
+
+      public static func makeTransferredEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "TransferredEvent"])
+      }
+
+      public static func makeUnassignedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "UnassignedEvent"])
+      }
+
+      public static func makeUnlabeledEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "UnlabeledEvent"])
+      }
+
       public static func makeUnlockedEvent() -> Node {
         return Node(unsafeResultMap: ["__typename": "UnlockedEvent"])
+      }
+
+      public static func makeUnmarkedAsDuplicateEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "UnmarkedAsDuplicateEvent"])
+      }
+
+      public static func makeUnpinnedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "UnpinnedEvent"])
+      }
+
+      public static func makeUnsubscribedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "UnsubscribedEvent"])
+      }
+
+      public static func makeUserBlockedEvent() -> Node {
+        return Node(unsafeResultMap: ["__typename": "UserBlockedEvent"])
       }
 
       public var __typename: String {
