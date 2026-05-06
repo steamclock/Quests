@@ -1,70 +1,177 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Apollo",
-        "repositoryURL": "https://github.com/apollographql/apollo-ios.git",
-        "state": {
-          "branch": null,
-          "revision": "26996f4034428bb67dbfaace8a5bc30aac09a714",
-          "version": "0.27.1"
-        }
-      },
-      {
-        "package": "PathKit",
-        "repositoryURL": "https://github.com/kylef/PathKit.git",
-        "state": {
-          "branch": null,
-          "revision": "e2f5be30e4c8f531c9c1e8765aa7b71c0a45d7a0",
-          "version": "0.9.2"
-        }
-      },
-      {
-        "package": "Spectre",
-        "repositoryURL": "https://github.com/kylef/Spectre.git",
-        "state": {
-          "branch": null,
-          "revision": "f14ff47f45642aa5703900980b014c2e9394b6e5",
-          "version": "0.9.0"
-        }
-      },
-      {
-        "package": "SQLite.swift",
-        "repositoryURL": "https://github.com/stephencelis/SQLite.swift.git",
-        "state": {
-          "branch": null,
-          "revision": "0a9893ec030501a3956bee572d6b4fdd3ae158a1",
-          "version": "0.12.2"
-        }
-      },
-      {
-        "package": "Starscream",
-        "repositoryURL": "https://github.com/daltoniam/Starscream",
-        "state": {
-          "branch": null,
-          "revision": "e6b65c6d9077ea48b4a7bdda8994a1d3c6969c8d",
-          "version": "3.1.1"
-        }
-      },
-      {
-        "package": "Stencil",
-        "repositoryURL": "https://github.com/stencilproject/Stencil.git",
-        "state": {
-          "branch": null,
-          "revision": "0e9a78d6584e3812cd9c09494d5c7b483e8f533c",
-          "version": "0.13.1"
-        }
-      },
-      {
-        "package": "swift-nio-zlib-support",
-        "repositoryURL": "https://github.com/apple/swift-nio-zlib-support.git",
-        "state": {
-          "branch": null,
-          "revision": "37760e9a52030bb9011972c5213c3350fa9d41fd",
-          "version": "1.0.0"
-        }
+  "originHash" : "fc40e972e6d6f9c917edaf4670af29bb98d58a1171abb3a5218138c94a3edb7a",
+  "pins" : [
+    {
+      "identity" : "apollo-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apollographql/apollo-ios.git",
+      "state" : {
+        "revision" : "26996f4034428bb67dbfaace8a5bc30aac09a714",
+        "version" : "0.27.1"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "cwlcatchexception",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mattgallagher/CwlCatchException.git",
+      "state" : {
+        "revision" : "07b2ba21d361c223e25e3c1e924288742923f08c",
+        "version" : "2.2.1"
+      }
+    },
+    {
+      "identity" : "cwlpreconditiontesting",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mattgallagher/CwlPreconditionTesting.git",
+      "state" : {
+        "revision" : "0139c665ebb45e6a9fbdb68aabfd7c39f3fe0071",
+        "version" : "2.2.2"
+      }
+    },
+    {
+      "identity" : "cwlutils",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mattgallagher/CwlUtils",
+      "state" : {
+        "revision" : "0bfc4587d01cfc796b6c7e118fc631333dd8ab33",
+        "version" : "3.0.0"
+      }
+    },
+    {
+      "identity" : "down",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/johnxnguyen/down",
+      "state" : {
+        "branch" : "master",
+        "revision" : "e754ab1c80920dd51a8e08290c912ac1c2ac8b58"
+      }
+    },
+    {
+      "identity" : "netable",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/steamclock/netable",
+      "state" : {
+        "revision" : "bb75b33c0a1b88f07b2a6e10e611b7b5dce78dbb",
+        "version" : "0.10.3"
+      }
+    },
+    {
+      "identity" : "nimble",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Quick/Nimble.git",
+      "state" : {
+        "revision" : "e9d769113660769a4d9dd3afb855562c0b7ae7b0",
+        "version" : "7.3.4"
+      }
+    },
+    {
+      "identity" : "pathkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kylef/PathKit.git",
+      "state" : {
+        "revision" : "e2f5be30e4c8f531c9c1e8765aa7b71c0a45d7a0",
+        "version" : "0.9.2"
+      }
+    },
+    {
+      "identity" : "quick",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Quick/Quick.git",
+      "state" : {
+        "revision" : "f2b5a06440ea87eba1a167cab37bf6496646c52e",
+        "version" : "1.3.4"
+      }
+    },
+    {
+      "identity" : "reachability.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ashleymills/Reachability.swift",
+      "state" : {
+        "branch" : "master",
+        "revision" : "21d1dc412cfecbe6e34f1f4c4eb88d3f912654a6"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/snapkit/snapkit",
+      "state" : {
+        "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
+        "version" : "5.7.1"
+      }
+    },
+    {
+      "identity" : "spectre",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kylef/Spectre.git",
+      "state" : {
+        "revision" : "f14ff47f45642aa5703900980b014c2e9394b6e5",
+        "version" : "0.9.0"
+      }
+    },
+    {
+      "identity" : "sqlite.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stephencelis/SQLite.swift.git",
+      "state" : {
+        "revision" : "0a9893ec030501a3956bee572d6b4fdd3ae158a1",
+        "version" : "0.12.2"
+      }
+    },
+    {
+      "identity" : "starscream",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/daltoniam/Starscream",
+      "state" : {
+        "revision" : "e6b65c6d9077ea48b4a7bdda8994a1d3c6969c8d",
+        "version" : "3.1.1"
+      }
+    },
+    {
+      "identity" : "stencil",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stencilproject/Stencil.git",
+      "state" : {
+        "revision" : "0e9a78d6584e3812cd9c09494d5c7b483e8f533c",
+        "version" : "0.13.1"
+      }
+    },
+    {
+      "identity" : "swift-nio-zlib-support",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-nio-zlib-support.git",
+      "state" : {
+        "revision" : "37760e9a52030bb9011972c5213c3350fa9d41fd",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swiftyuserdefaults",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sunshinejr/SwiftyUserDefaults",
+      "state" : {
+        "revision" : "566ace16ee91242b61e2e9da6cdbe7dfdadd926c",
+        "version" : "4.0.0"
+      }
+    },
+    {
+      "identity" : "valet",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/square/Valet",
+      "state" : {
+        "revision" : "246baf6be3f9e3ff116dc05251a08f69dd7c7b9d",
+        "version" : "5.1.0"
+      }
+    },
+    {
+      "identity" : "xcglogger",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/DaveWoodCom/XCGLogger",
+      "state" : {
+        "revision" : "4def3c1c772ca90ad5e7bfc8ac437c3b0b4276cf",
+        "version" : "7.1.5"
+      }
+    }
+  ],
+  "version" : 3
 }

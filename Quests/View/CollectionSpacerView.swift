@@ -23,7 +23,6 @@
 //
 
 import Cocoa
-import SnapKit
 
 class CollectionSpacerView: NSView {
     @IBOutlet private var spacer: NSBox!

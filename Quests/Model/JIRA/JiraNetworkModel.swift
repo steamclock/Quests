@@ -22,7 +22,6 @@
 //  THE SOFTWARE.
 //
 
-import Alamofire
 import Foundation
 import Netable
 import SwiftyUserDefaults
