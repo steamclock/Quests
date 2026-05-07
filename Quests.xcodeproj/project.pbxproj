@@ -470,13 +470,13 @@
 				A171A658209B710B00777B6A /* Sources */,
 				A171A659209B710B00777B6A /* Frameworks */,
 				A171A65A209B710B00777B6A /* Resources */,
-				B31DB30C20AE2BA4000DE7CD /* Run Swiftlint */,
 				B3EAE452215009BC00878B04 /* Copy Launcher */,
 				A697E5B52FAC05FB00886C4B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A697E5B92FACF1DD00886C4B /* PBXTargetDependency */,
 			);
 			name = Quests;
 			packageProductDependencies = (
@@ -556,6 +556,7 @@
 				A697E5A92FAC036400886C4B /* XCRemoteSwiftPackageReference "down" */,
 				A697E5AC2FAC038E00886C4B /* XCRemoteSwiftPackageReference "snapkit" */,
 				A697E5B22FAC05DB00886C4B /* XCRemoteSwiftPackageReference "CwlUtils" */,
+				A697E5B72FACF19C00886C4B /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
 			);
 			productRefGroup = A171A65D209B710B00777B6A /* Products */;
 			projectDirPath = "";
@@ -610,20 +611,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B31DB30C20AE2BA4000DE7CD /* Run Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Swiftlint";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
 		B3BCBA0920B4C1FA001FE60B /* Generate Apollo GraphQL API */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -710,6 +697,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A697E5B92FACF1DD00886C4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A697E5B82FACF1DD00886C4B /* SwiftLintBuildToolPlugin */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A171A663209B710E00777B6A /* MainMenu.xib */ = {
@@ -1282,6 +1276,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		A697E5B72FACF19C00886C4B /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.63.2;
+			};
+		};
 		C6DFF85D247C455500E364AF /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
@@ -1337,6 +1339,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A697E5B22FAC05DB00886C4B /* XCRemoteSwiftPackageReference "CwlUtils" */;
 			productName = CwlUtils;
+		};
+		A697E5B82FACF1DD00886C4B /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A697E5B72FACF19C00886C4B /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
 		};
 		C6DFF85E247C455500E364AF /* Apollo */ = {
 			isa = XCSwiftPackageProductDependency;

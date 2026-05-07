@@ -1,5 +1,5 @@
 {
-  "originHash" : "fc40e972e6d6f9c917edaf4670af29bb98d58a1171abb3a5218138c94a3edb7a",
+  "originHash" : "b34f30f7d590debe869589f475d4be010ac091a14ebc5b14364ed29dfca944de",
   "pins" : [
     {
       "identity" : "apollo-ios",
@@ -143,6 +143,15 @@
       "state" : {
         "revision" : "37760e9a52030bb9011972c5213c3350fa9d41fd",
         "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swiftlintplugins",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SimplyDanny/SwiftLintPlugins",
+      "state" : {
+        "revision" : "8a4640d14777685ba8f14e832373160498fbab92",
+        "version" : "0.63.2"
       }
     },
     {
