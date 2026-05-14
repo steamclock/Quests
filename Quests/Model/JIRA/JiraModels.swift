@@ -27,7 +27,7 @@ import Cocoa
 // swiftlint:disable nesting
 struct Jira {
     struct Response: Decodable {
-        let total: Int
+        let total: Int?
         let issues: [Issue]
     }
 
@@ -47,7 +47,7 @@ struct Jira {
                 },
                 name: fields.name,
                 repoName: fields.project.name,
-                selfAssigned: fields.assignee.username == fields.author.username,
+                selfAssigned: fields.assignee?.username == fields.author.username,
                 source: .jira,
                 type: .issue,
                 updatedAt: Formatter.iso8601.date(from: fields.updatedAt) ?? Date(),
@@ -57,7 +57,7 @@ struct Jira {
     }
 
     struct Fields: Decodable {
-        let assignee: User
+        let assignee: User?
         let author: User
         let labels: [String]
         let name: String
@@ -93,7 +93,7 @@ struct Jira {
         let username: String
 
         enum CodingKeys: String, CodingKey {
-            case username = "emailAddress"
+            case username = "accountId"
         }
 
         static func == (lhs: User, rhs: User) -> Bool {
