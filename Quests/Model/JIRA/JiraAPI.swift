@@ -51,10 +51,13 @@ extension JiraAPI {
 
         public var method: HTTPMethod { .get }
 
-        public var path: String { "search" }
+        public var path: String { "search/jql" }
 
         public var parameters: [String: String] {
-            ["jql": "assignee=currentUser()"]
+            [
+                "jql": "assignee=currentUser()",
+                "fields": "summary,status,assignee,creator,labels,project,updated"
+            ]
         }
     }
 }
