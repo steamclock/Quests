@@ -24,6 +24,7 @@
 
 import Foundation
 import SwiftyUserDefaults
+import AppKit
 
 extension Notification.Name {
     static let shouldOpenSettings = Notification.Name(rawValue: "shouldOpenSettings")

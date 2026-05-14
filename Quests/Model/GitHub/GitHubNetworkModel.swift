@@ -23,6 +23,7 @@
 //
 
 import Apollo
+import AppKit
 import Foundation
 import Netable
 import SwiftyUserDefaults

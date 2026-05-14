@@ -11,6 +11,16 @@
 		A171A662209B710E00777B6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A171A661209B710E00777B6A /* Assets.xcassets */; };
 		A171A665209B710E00777B6A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A171A663209B710E00777B6A /* MainMenu.xib */; };
 		A171A66E209B734400777B6A /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A171A66D209B734400777B6A /* StatusMenuController.swift */; };
+		A697E59A2FAC01A900886C4B /* Netable in Frameworks */ = {isa = PBXBuildFile; productRef = A697E5992FAC01A900886C4B /* Netable */; };
+		A697E59D2FAC01F900886C4B /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = A697E59C2FAC01F900886C4B /* SwiftyUserDefaults */; };
+		A697E5A02FAC022C00886C4B /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = A697E59F2FAC022C00886C4B /* Valet */; };
+		A697E5A32FAC028B00886C4B /* ObjcExceptionBridging in Frameworks */ = {isa = PBXBuildFile; productRef = A697E5A22FAC028B00886C4B /* ObjcExceptionBridging */; };
+		A697E5A52FAC028B00886C4B /* XCGLogger in Frameworks */ = {isa = PBXBuildFile; productRef = A697E5A42FAC028B00886C4B /* XCGLogger */; };
+		A697E5A82FAC02E300886C4B /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = A697E5A72FAC02E300886C4B /* Reachability */; };
+		A697E5AB2FAC036400886C4B /* Down in Frameworks */ = {isa = PBXBuildFile; productRef = A697E5AA2FAC036400886C4B /* Down */; };
+		A697E5AE2FAC038E00886C4B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A697E5AD2FAC038E00886C4B /* SnapKit */; };
+		A697E5B42FAC05FB00886C4B /* CwlUtils in Frameworks */ = {isa = PBXBuildFile; productRef = A697E5B32FAC05FB00886C4B /* CwlUtils */; };
+		A697E5B62FAC05FB00886C4B /* CwlUtils in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A697E5B32FAC05FB00886C4B /* CwlUtils */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B3066DE02166DA7C008BC1EC /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3066DDF2166DA7C008BC1EC /* Source.swift */; };
 		B3066DE62167D24C008BC1EC /* NetworkCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3066DE52167D24C008BC1EC /* NetworkCoordinator.swift */; };
 		B3066DEB2167D5DC008BC1EC /* GitHubNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3066DEA2167D5DC008BC1EC /* GitHubNetworkModel.swift */; };
@@ -90,10 +100,20 @@
 		C6393CA7258BC76700E02B45 /* CODE_OF_CONDUCT.md in Resources */ = {isa = PBXBuildFile; fileRef = C6393CA5258BC76700E02B45 /* CODE_OF_CONDUCT.md */; };
 		C6DFF85F247C455500E364AF /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = C6DFF85E247C455500E364AF /* Apollo */; };
 		C6DFF861247C455500E364AF /* ApolloCodegenLib in Frameworks */ = {isa = PBXBuildFile; productRef = C6DFF860247C455500E364AF /* ApolloCodegenLib */; };
-		D06E85E0F8BF2E3AD6938364 /* Pods_Quests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08052DA3518043BC9D1BDBAA /* Pods_Quests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		A697E5B52FAC05FB00886C4B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A697E5B62FAC05FB00886C4B /* CwlUtils in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3EAE452215009BC00878B04 /* Copy Launcher */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,11 +128,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		08052DA3518043BC9D1BDBAA /* Pods_Quests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6652ADA4458D62A5653ADDF8 /* Pods-Quests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quests/Pods-Quests.release.xcconfig"; sourceTree = "<group>"; };
-		735168F1C9E7955AA9ABD81C /* Pods-Quests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quests/Pods-Quests.debug.xcconfig"; sourceTree = "<group>"; };
-		7D9114BF15DB5B6415AE4B8F /* Pods-Quests.debuginternal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quests.debuginternal.xcconfig"; path = "Pods/Target Support Files/Pods-Quests/Pods-Quests.debuginternal.xcconfig"; sourceTree = "<group>"; };
-		837DC5B08CC8440EA8E1AB41 /* Pods-Quests.releaseinternal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quests.releaseinternal.xcconfig"; path = "Pods/Target Support Files/Pods-Quests/Pods-Quests.releaseinternal.xcconfig"; sourceTree = "<group>"; };
 		A171A65C209B710B00777B6A /* Quests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A171A65F209B710B00777B6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A171A661209B710E00777B6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -208,8 +223,16 @@
 			files = (
 				B3EAE455215009DE00878B04 /* ServiceManagement.framework in Frameworks */,
 				C6DFF85F247C455500E364AF /* Apollo in Frameworks */,
-				D06E85E0F8BF2E3AD6938364 /* Pods_Quests.framework in Frameworks */,
+				A697E5AB2FAC036400886C4B /* Down in Frameworks */,
+				A697E5B42FAC05FB00886C4B /* CwlUtils in Frameworks */,
+				A697E59A2FAC01A900886C4B /* Netable in Frameworks */,
+				A697E5A52FAC028B00886C4B /* XCGLogger in Frameworks */,
+				A697E5A82FAC02E300886C4B /* Reachability in Frameworks */,
+				A697E5A02FAC022C00886C4B /* Valet in Frameworks */,
+				A697E59D2FAC01F900886C4B /* SwiftyUserDefaults in Frameworks */,
 				C6DFF861247C455500E364AF /* ApolloCodegenLib in Frameworks */,
+				A697E5A32FAC028B00886C4B /* ObjcExceptionBridging in Frameworks */,
+				A697E5AE2FAC038E00886C4B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				B3EAE454215009DE00878B04 /* ServiceManagement.framework */,
-				08052DA3518043BC9D1BDBAA /* Pods_Quests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -238,7 +260,6 @@
 				A171A65E209B710B00777B6A /* Quests */,
 				B3EAE442215007F500878B04 /* QuestsLauncher */,
 				A171A65D209B710B00777B6A /* Products */,
-				CA305091379F90438F118B78 /* Pods */,
 				9615DA27F83333485935BE44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -438,17 +459,6 @@
 			path = QuestsLauncher;
 			sourceTree = "<group>";
 		};
-		CA305091379F90438F118B78 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				735168F1C9E7955AA9ABD81C /* Pods-Quests.debug.xcconfig */,
-				6652ADA4458D62A5653ADDF8 /* Pods-Quests.release.xcconfig */,
-				7D9114BF15DB5B6415AE4B8F /* Pods-Quests.debuginternal.xcconfig */,
-				837DC5B08CC8440EA8E1AB41 /* Pods-Quests.releaseinternal.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -456,23 +466,31 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A171A66A209B710E00777B6A /* Build configuration list for PBXNativeTarget "Quests" */;
 			buildPhases = (
-				20F2E34E11CE17AEEE3DC4DC /* [CP] Check Pods Manifest.lock */,
 				B3BCBA0920B4C1FA001FE60B /* Generate Apollo GraphQL API */,
 				A171A658209B710B00777B6A /* Sources */,
 				A171A659209B710B00777B6A /* Frameworks */,
 				A171A65A209B710B00777B6A /* Resources */,
-				57CAF85ADC6263E68E406521 /* [CP] Embed Pods Frameworks */,
-				B31DB30C20AE2BA4000DE7CD /* Run Swiftlint */,
 				B3EAE452215009BC00878B04 /* Copy Launcher */,
+				A697E5B52FAC05FB00886C4B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A697E5B92FACF1DD00886C4B /* PBXTargetDependency */,
 			);
 			name = Quests;
 			packageProductDependencies = (
 				C6DFF85E247C455500E364AF /* Apollo */,
 				C6DFF860247C455500E364AF /* ApolloCodegenLib */,
+				A697E5992FAC01A900886C4B /* Netable */,
+				A697E59C2FAC01F900886C4B /* SwiftyUserDefaults */,
+				A697E59F2FAC022C00886C4B /* Valet */,
+				A697E5A22FAC028B00886C4B /* ObjcExceptionBridging */,
+				A697E5A42FAC028B00886C4B /* XCGLogger */,
+				A697E5A72FAC02E300886C4B /* Reachability */,
+				A697E5AA2FAC036400886C4B /* Down */,
+				A697E5AD2FAC038E00886C4B /* SnapKit */,
+				A697E5B32FAC05FB00886C4B /* CwlUtils */,
 			);
 			productName = Quests;
 			productReference = A171A65C209B710B00777B6A /* Quests.app */;
@@ -501,8 +519,9 @@
 		A171A654209B710B00777B6A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 2640;
 				ORGANIZATIONNAME = Steamclock;
 				TargetAttributes = {
 					A171A65B209B710B00777B6A = {
@@ -529,6 +548,15 @@
 			mainGroup = A171A653209B710B00777B6A;
 			packageReferences = (
 				C6DFF85D247C455500E364AF /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				A697E5982FAC015D00886C4B /* XCRemoteSwiftPackageReference "netable" */,
+				A697E59B2FAC01F900886C4B /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
+				A697E59E2FAC022C00886C4B /* XCRemoteSwiftPackageReference "Valet" */,
+				A697E5A12FAC027600886C4B /* XCRemoteSwiftPackageReference "XCGLogger" */,
+				A697E5A62FAC02E300886C4B /* XCRemoteSwiftPackageReference "Reachability" */,
+				A697E5A92FAC036400886C4B /* XCRemoteSwiftPackageReference "down" */,
+				A697E5AC2FAC038E00886C4B /* XCRemoteSwiftPackageReference "snapkit" */,
+				A697E5B22FAC05DB00886C4B /* XCRemoteSwiftPackageReference "CwlUtils" */,
+				A697E5B72FACF19C00886C4B /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
 			);
 			productRefGroup = A171A65D209B710B00777B6A /* Products */;
 			projectDirPath = "";
@@ -583,55 +611,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		20F2E34E11CE17AEEE3DC4DC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Quests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		57CAF85ADC6263E68E406521 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Quests/Pods-Quests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Quests/Pods-Quests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Quests/Pods-Quests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B31DB30C20AE2BA4000DE7CD /* Run Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Swiftlint";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
 		B3BCBA0920B4C1FA001FE60B /* Generate Apollo GraphQL API */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -719,6 +698,13 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A697E5B92FACF1DD00886C4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A697E5B82FACF1DD00886C4B /* SwiftLintBuildToolPlugin */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		A171A663209B710E00777B6A /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
@@ -765,6 +751,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -773,9 +760,12 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = GH868RP95T;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -794,6 +784,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -825,6 +816,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -833,9 +825,12 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = GH868RP95T;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -847,6 +842,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
@@ -854,7 +850,6 @@
 		};
 		A171A66B209B710E00777B6A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 735168F1C9E7955AA9ABD81C /* Pods-Quests.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID = com.steamclock.quests;
@@ -863,14 +858,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 202503181000;
-				DEVELOPMENT_TEAM = GH868RP95T;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				EXCLUDED_SOURCE_FILE_NAMES = "*.md";
 				INFOPLIST_FILE = "Quests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.steamclock.quests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -881,7 +877,6 @@
 		};
 		A171A66C209B710E00777B6A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6652ADA4458D62A5653ADDF8 /* Pods-Quests.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID = com.steamclock.quests;
@@ -890,14 +885,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 202503181000;
-				DEVELOPMENT_TEAM = GH868RP95T;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				EXCLUDED_SOURCE_FILE_NAMES = "*.md";
 				INFOPLIST_FILE = "Quests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.steamclock.quests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -932,6 +928,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -940,9 +937,12 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = GH868RP95T;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -954,6 +954,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
@@ -961,7 +962,6 @@
 		};
 		B314C97E21CD61D3004A0FDF /* ReleaseInternal */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 837DC5B08CC8440EA8E1AB41 /* Pods-Quests.releaseinternal.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID = "com.steamclock.quests-beta";
@@ -970,14 +970,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 202503181000;
-				DEVELOPMENT_TEAM = GH868RP95T;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				EXCLUDED_SOURCE_FILE_NAMES = "*.md";
 				INFOPLIST_FILE = "Quests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.3.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DINTERNAL";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.steamclock.quests-beta";
@@ -996,13 +997,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 202012221000;
-				DEVELOPMENT_TEAM = GH868RP95T;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = QuestsLauncher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				OTHER_SWIFT_FLAGS = "-DINTERNAL";
 				PRODUCT_BUNDLE_IDENTIFIER = com.steamclock.QuestsLauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1037,6 +1038,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1045,9 +1047,12 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = GH868RP95T;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1066,6 +1071,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1073,7 +1079,6 @@
 		};
 		B314C98421CD61F4004A0FDF /* DebugInternal */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D9114BF15DB5B6415AE4B8F /* Pods-Quests.debuginternal.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID = "com.steamclock.quests-beta";
@@ -1082,14 +1087,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 202503181000;
-				DEVELOPMENT_TEAM = GH868RP95T;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				EXCLUDED_SOURCE_FILE_NAMES = "*.md";
 				INFOPLIST_FILE = "Quests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.3.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DINTERNAL";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.steamclock.quests-beta";
@@ -1108,13 +1114,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 202012221000;
-				DEVELOPMENT_TEAM = GH868RP95T;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = QuestsLauncher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				OTHER_SWIFT_FLAGS = "-DINTERNAL";
 				PRODUCT_BUNDLE_IDENTIFIER = com.steamclock.QuestsLauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1131,13 +1137,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 202012221000;
-				DEVELOPMENT_TEAM = GH868RP95T;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = QuestsLauncher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.steamclock.QuestsLauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1153,13 +1159,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 202012221000;
-				DEVELOPMENT_TEAM = GH868RP95T;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = QuestsLauncher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.steamclock.QuestsLauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1206,6 +1212,78 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A697E5982FAC015D00886C4B /* XCRemoteSwiftPackageReference "netable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/steamclock/netable";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.2;
+			};
+		};
+		A697E59B2FAC01F900886C4B /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sunshinejr/SwiftyUserDefaults";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		A697E59E2FAC022C00886C4B /* XCRemoteSwiftPackageReference "Valet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/square/Valet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+		A697E5A12FAC027600886C4B /* XCRemoteSwiftPackageReference "XCGLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DaveWoodCom/XCGLogger";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.5;
+			};
+		};
+		A697E5A62FAC02E300886C4B /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A697E5A92FAC036400886C4B /* XCRemoteSwiftPackageReference "down" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnxnguyen/down";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A697E5AC2FAC038E00886C4B /* XCRemoteSwiftPackageReference "snapkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/snapkit/snapkit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		A697E5B22FAC05DB00886C4B /* XCRemoteSwiftPackageReference "CwlUtils" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mattgallagher/CwlUtils";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		A697E5B72FACF19C00886C4B /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.63.2;
+			};
+		};
 		C6DFF85D247C455500E364AF /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
@@ -1217,6 +1295,56 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A697E5992FAC01A900886C4B /* Netable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A697E5982FAC015D00886C4B /* XCRemoteSwiftPackageReference "netable" */;
+			productName = Netable;
+		};
+		A697E59C2FAC01F900886C4B /* SwiftyUserDefaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A697E59B2FAC01F900886C4B /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */;
+			productName = SwiftyUserDefaults;
+		};
+		A697E59F2FAC022C00886C4B /* Valet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A697E59E2FAC022C00886C4B /* XCRemoteSwiftPackageReference "Valet" */;
+			productName = Valet;
+		};
+		A697E5A22FAC028B00886C4B /* ObjcExceptionBridging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A697E5A12FAC027600886C4B /* XCRemoteSwiftPackageReference "XCGLogger" */;
+			productName = ObjcExceptionBridging;
+		};
+		A697E5A42FAC028B00886C4B /* XCGLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A697E5A12FAC027600886C4B /* XCRemoteSwiftPackageReference "XCGLogger" */;
+			productName = XCGLogger;
+		};
+		A697E5A72FAC02E300886C4B /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A697E5A62FAC02E300886C4B /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
+		};
+		A697E5AA2FAC036400886C4B /* Down */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A697E5A92FAC036400886C4B /* XCRemoteSwiftPackageReference "down" */;
+			productName = Down;
+		};
+		A697E5AD2FAC038E00886C4B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A697E5AC2FAC038E00886C4B /* XCRemoteSwiftPackageReference "snapkit" */;
+			productName = SnapKit;
+		};
+		A697E5B32FAC05FB00886C4B /* CwlUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A697E5B22FAC05DB00886C4B /* XCRemoteSwiftPackageReference "CwlUtils" */;
+			productName = CwlUtils;
+		};
+		A697E5B82FACF1DD00886C4B /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A697E5B72FACF19C00886C4B /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
 		C6DFF85E247C455500E364AF /* Apollo */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C6DFF85D247C455500E364AF /* XCRemoteSwiftPackageReference "apollo-ios" */;

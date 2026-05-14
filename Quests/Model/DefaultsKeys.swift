@@ -23,6 +23,7 @@
 //
 
 import SwiftyUserDefaults
+import Foundation
 
 extension DefaultsKeys {
     static let hasLaunchedBefore = DefaultsKey<Bool>("hasLaunchedBefore", defaultValue: false)
